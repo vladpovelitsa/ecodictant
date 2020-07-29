@@ -52,6 +52,8 @@ gulp.task('scripts', function(done){
         'app/libs/paw-select/paw-select.js',
         'app/libs/paw-range/paw-range.js',
         'app/libs/lightbox/dist/js/lightbox.min.js',
+        'app/libs/jquery.maskedinput.js',
+
         ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
