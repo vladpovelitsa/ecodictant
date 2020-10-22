@@ -7,7 +7,6 @@
 		padding: 0;
 		box-sizing: border-box;
 		outline: none;
-
 	}
 	body {
 		font-family: '', sans-serif;
@@ -29,9 +28,6 @@
 		transition: 0.5s;
 		text-decoration: none;
 	} 
-	a:visited, a:focus {
-		color: inherit;
-	}
 	address {
 		font-style: normal;
 	}
@@ -56,6 +52,9 @@
 	img,svg {
 		display: block;
 		max-width: 100%;
+	}
+	svg {
+		transition: .5s;
 	}
 /*global*/
 
