@@ -67,6 +67,7 @@ gulp.task('styles', function(done){
         'app/libs/paw-select/paw-select.scss',
         'app/libs/paw-range/paw-range.scss',
         'app/libs/lightbox/dist/css/lightbox.min.css',
+
         ])
     .pipe(concat('libs.min.css'))
     .pipe(sass({

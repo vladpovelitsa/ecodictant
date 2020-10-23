@@ -1,4 +1,16 @@
+// @media screen and (max-width: 1200px) {
+// }
+// @media screen and (max-width: 767px) {
+// }
+// @media screen and (max-width: 515px) {
+// }
+// @media screen and (max-width: 400px) {
+// }
+// @media screen and (max-width: 355px) {
+// }
+
 /*global*/
+
  	html {
  		scroll-behavior: smooth;
  	}
@@ -9,9 +21,9 @@
 		outline: none;
 	}
 	body {
-		font-family: '', sans-serif;
+		font-family: 'Golos', sans-serif;
 		background: #fff;
-		color:#000;
+		color:#02517A;
 		font-size: 16px;
 	}
 	button {
@@ -39,8 +51,8 @@
 	    -moz-appearance: textfield;
 	}
 	.center {
-		padding-left: calc(50vw - 595px);
-		padding-right: calc(50vw - 595px);
+		padding-left: calc(50vw - 585px);
+		padding-right: calc(50vw - 580px);
 	}
 	.visually_hidden {
 		position: absolute;
@@ -56,13 +68,93 @@
 	svg {
 		transition: .5s;
 	}
+	.btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		border-radius: 6px;
+		border: none;
+		font-size: 17px;
+		font-weight: 700;
+		&:hover {
+			opacity: .7;
+		}
+		&--blue {
+			background: #008DD2;
+			color: #fff;
+		}
+		&--green {
+			background: #98C22A;
+			color: #fff;
+		}
+	}
+	.section_heading {
+		font-size: 38px;
+	}
 /*global*/
-
+// slick
+	.slick {
+		&-arrow {
+			display: block;
+			width: 37px;
+			height: 37px;
+			color: transparent;
+			font-size: 1px;
+			overflow: hidden;
+			border: none;
+			z-index: 5;
+			border: 1px solid transparent;
+			border-radius: 6px;
+			&.slick-prev {
+				background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.755' height='12.682' viewBox='0 0 7.755 12.682'%3E%3Cpath id='Path_6600' data-name='Path 6600' d='M343.483,454.764l-5.634-5.634,5.634-5.634' transform='translate(-336.435 -442.789)' fill='none' stroke='%23fff' stroke-miterlimit='10' stroke-width='2'/%3E%3C/svg%3E%0A") center no-repeat  #02517A;
+				left: 0;
+			}
+			&.slick-next {
+				background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.755' height='12.682' viewBox='0 0 7.755 12.682'%3E%3Cpath id='Path_6599' data-name='Path 6599' d='M343.483,454.764l-5.634-5.634,5.634-5.634' transform='translate(344.19 455.471) rotate(180)' fill='none' stroke='%23fff' stroke-miterlimit='10' stroke-width='2'/%3E%3C/svg%3E%0A") center no-repeat  #02517A;
+				right: 0;
+			}
+			&:hover {
+				border-color: #909EBB;
+				&.slick-prev {
+					background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.755' height='12.682' viewBox='0 0 7.755 12.682'%3E%3Cpath id='Path_6600' data-name='Path 6600' d='M343.483,454.764l-5.634-5.634,5.634-5.634' transform='translate(-336.435 -442.789)' fill='none' stroke='%23909EBB' stroke-miterlimit='10' stroke-width='2'/%3E%3C/svg%3E%0A") center no-repeat;
+				}
+				&.slick-next {
+					background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.755' height='12.682' viewBox='0 0 7.755 12.682'%3E%3Cpath id='Path_6599' data-name='Path 6599' d='M343.483,454.764l-5.634-5.634,5.634-5.634' transform='translate(344.19 455.471) rotate(180)' fill='none' stroke='%23909EBB' stroke-miterlimit='10' stroke-width='2'/%3E%3C/svg%3E%0A") center no-repeat;
+				}
+			}
+		}
+		&-dots {
+			display: flex;
+			justify-content: center;
+			list-style: none;
+			button {
+				background: transparent;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				border: 1px solid #7F8FA4;
+				display: block;
+				font-size: 1px;
+				color: transparent;
+				margin: 0 3px;
+			}
+			.slick-active {
+				button {
+					background: #7F8FA4;
+				}
+			}
+		}
+	}
+// slick
 
 @media screen and (max-width: 1200px) {
 	.center {
 		padding-left: calc(50vw - 360px);
 		padding-right: calc(50vw - 360px);
+	}
+	body, html {
+		// overflow-x: hidden;
 	}
 }
 
@@ -71,11 +163,14 @@
 		padding-left: calc(50vw - 250px);
 		padding-right: calc(50vw - 250px);
 	}
+	.section_heading {
+		font-size: 22px;
+	}
 }
 @media screen and (max-width: 515px) {
 	.center {
-		padding-left: calc(50vw - 185px);
-		padding-right: calc(50vw - 185px);
+		padding-left: calc(50vw - 175px);
+		padding-right: calc(50vw - 175px);
 	}
 }
 

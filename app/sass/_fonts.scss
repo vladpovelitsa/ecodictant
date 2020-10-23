@@ -1,10 +1,44 @@
 /*fonts*/
 	@font-face {
-		font-family: 'Name';
-		src: url('../fonts/name/name.woff2') format('woff2'), /* Super Modern Browsers */
-			 url('../fonts/name/name.woff') format('woff'), /* Pretty Modern Browsers */
-			 url('../fonts/name/name.ttf')  format('truetype'); /* Safari, Android, iOS */
+		font-family: 'Golos';
+		src: url('../fonts/golos_text/Golos_Text_Regular.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/golos_text/Golos_Text_Regular.woff') format('woff'), /* Pretty Modern Browsers */
+			 url('../fonts/golos_text/Golos_Text_Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 		font-weight: 400;
-		
+	}
+	@font-face {
+		font-family: 'Golos';
+		src: url('../fonts/golos_text/Golos_Text_Medium.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/golos_text/Golos_Text_Medium.woff') format('woff'), /* Pretty Modern Browsers */
+			 url('../fonts/golos_text/Golos_Text_Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+		font-weight: 500;
+	}
+	@font-face {
+		font-family: 'Golos';
+		src: url('../fonts/golos_text/Golos_Text_DemiBold.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/golos_text/Golos_Text_DemiBold.woff') format('woff'), /* Pretty Modern Browsers */
+			 url('../fonts/golos_text/Golos_Text_DemiBold.ttf')  format('truetype'); /* Safari, Android, iOS */
+		font-weight: 600;
+	}
+	@font-face {
+		font-family: 'Golos';
+		src: url('../fonts/golos_text/Golos_Text_Bold.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/golos_text/Golos_Text_Bold.woff') format('woff'), /* Pretty Modern Browsers */
+			 url('../fonts/golos_text/Golos_Text_Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+		font-weight: 700;
+	}
+	@font-face {
+		font-family: 'Golos';
+		src: url('../fonts/golos_text/Golos_Text_Black.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/golos_text/Golos_Text_Black.woff') format('woff'), /* Pretty Modern Browsers */
+			 url('../fonts/golos_text/Golos_Text_Black.ttf')  format('truetype'); /* Safari, Android, iOS */
+		font-weight: 900;
+	}
+	@font-face {
+		font-family: 'Golos';
+		src: url('../fonts/golos_text/Golos_Text_VF.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('../fonts/golos_text/Golos_Text_VF.woff') format('woff'), /* Pretty Modern Browsers */
+			 url('../fonts/golos_text/Golos_Text_VF.ttf')  format('truetype'); /* Safari, Android, iOS */
+		font-weight: 100;
 	}
 /*fonts*/
