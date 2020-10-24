@@ -129,7 +129,6 @@ $('.organizations__slider').slick({
   variableWidth: true,
 
 })
-
 $('.partners__wrap').slick({
   variableWidth: true,
   infinite: false,
@@ -166,4 +165,10 @@ function countDown(startYear, startMouth, startDay){
 }
 
 // start 15 nov 2020
-countDown(2020, 10, 15)
+if(document.querySelector('.offer__countdown_container')){
+  countDown(2020, 10, 15);
+}
+
+
+
+

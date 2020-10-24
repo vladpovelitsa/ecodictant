@@ -1,8 +1,7 @@
 .offer {
     background: url('../img/1.jpg') top left no-repeat;
     background-size: cover;
-    min-height: 673px;
-    padding-top: 316px;
+    padding-top: 322px;
     padding-bottom: 38px;
     display: flex;
     justify-content: space-between;
@@ -28,6 +27,12 @@
         width: 100%;
         z-index: 150;
         position: relative;
+        &--big {
+            font-size: 60px;
+        }
+        &:only-child {
+            margin-bottom: 0;
+        }
     }
     &__date {
         font-size: 20px;
@@ -37,7 +42,6 @@
         font-weight: 700;
         color: #008DD2;
     }
-
     &__countdown {
         width: 100%;
         max-width: 390px;
@@ -110,7 +114,34 @@
             color:#7F8FA4;
         }
     }
+    &__desc {
+        font-size: 20px;
+        line-height: 1.5;
+        color: #008DD2;
+        margin-bottom: 58px;
+    }   
+    &--fullpage {
+        align-items: flex-start;
+        min-height:calc(100vh - 77px);
         
+    }
+    &--start {
+        min-height:calc(100vh - 77px);
+    }
+    &--inner {
+        align-items: flex-start;
+    }
+    .content--404,
+    .content--start {
+        .btn {
+            max-width: 370px;
+            height: 52px;
+            display: flex;
+        }
+    }
+    .mobile_btns {
+        display: none;
+    }
 }
 
 .faces {
@@ -434,7 +465,7 @@
     .section_heading {
         margin-bottom: 50px;
     }
-    &__phones {
+    &__wrap {
         display: flex;
         justify-content: space-between;
         margin-bottom: 27px;
@@ -509,7 +540,16 @@
         padding-top: 408px;
         flex-direction: column;
         &__heading {
-            font-size: 30px;
+            font-size: 29px;
+        }
+        
+        &--start {
+            background-position: 50% -175px;
+            background-size: auto;
+            min-height: calc(100vh - 149px);
+        } 
+        &--start {
+            align-items: flex-start;
         }
     }
     .faces {
@@ -538,6 +578,7 @@
                 &.slick-prev {
                     left: unset;
                     right: 60px;
+                    border-radius: 6px;
                 }
             }
             .slick-dots {
@@ -596,12 +637,13 @@
         }
     }   
     .contacts {
-        &__phones {
-            margin-bottom: 0;
+        &__wrap {
+            // margin-bottom: 0;
             flex-direction: column;
-            &_item {
-                margin-bottom: 30px;
-            }
+            
+        }
+        &__item {
+            margin-bottom: 20px;
         }
     }
 }
@@ -615,10 +657,67 @@
         }
         &__main {
             padding-bottom: 0;
+            .btn {
+                display: none;
+            }
         }
         .btn {
             width: 100%;
             margin-bottom: 20px;
+        }
+        &__desc {
+            font-size: 15px;
+            margin-bottom: 42px;
+            br {
+                display: none;
+            }
+        }
+        &--fullpage {
+            min-height: calc(100vh - 149px);
+            .offer__heading {
+
+            }
+        }
+        &--start {
+            .offer {
+                &__countdown_heading {
+                    display: none;
+                }
+                &__desc {
+                    max-width: 280px;
+                    br {
+                        display: block;
+                    }
+                }
+            }
+                
+        }
+        &__countdown {
+            &_container {
+                &:before {
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    border-radius: 0;
+                }
+            }
+            &_heading {
+                padding-left: 0;
+                font-size: 16px;
+            }
+        }
+        .mobile_btns {
+            display:block;
+            width: 100%;
+            margin-top: 37px;
+            .btn {
+                width: 100%;
+                border-radius: 6px;
+                height: 52px;
+                font-size: 18px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
     .faces {
@@ -633,11 +732,29 @@
         }
         &__img {
             max-width: 300px;
+            margin-top: -50px;
+        }
+        &__name {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+        &__profession {
+            font-size: 16px;
         }
     }
     .committee {
+        padding-bottom: 50px;
         &__member {
             margin-right: 0;
+        }
+        &__photo {
+            min-width: 165px;
+        }
+        &__text {
+            max-width: 156px;
+        }
+        &__about {
+            font-size: 10px;
         }
     }
     .organizations {
@@ -652,6 +769,7 @@
         } 
         &__text {
             font-size: 16px;
+            max-width: 330px;
         }
     }
     .reg_info {
@@ -660,6 +778,7 @@
         }
         &__item {
             padding: 26px 16px 36px;
+            background: #fff;
             &_heading {
                 max-width: 250px;
             }
@@ -669,7 +788,7 @@
         background-position:50% 100% ;
         background-size: contain;
         padding-bottom: 140px;
-        &__phones {
+        &__wrap {
             &_heading {
                 font-size: 18px;
                 line-height: 1.77;

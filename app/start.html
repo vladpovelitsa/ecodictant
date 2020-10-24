@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>
+		Всероссийский экологический диктант 
+	</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+	
+	<link rel="stylesheet" type="text/css" href="css/libs.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+<div class="wrapper">
+	
+	//= templates/header.html
+    <div class="center offer offer--start" >
+        <div class="content content--start">
+            <h1 class="offer__heading offer__heading--big">
+                Пройти Экодиктант
+            </h1>
+            <p class="sitemap offer__desc">
+                <strong>
+                    Данный раздел будет доступен <br>
+                    с 00.00 (по московскому времени) 15 ноября 2020 года <br>
+                    по 23.59 (по московскому времени) 16 ноября 2020 года
+                </strong>
+            </p> 
+            <a href='#' class="btn btn--green">
+                На главную
+            </a>
+        </div>
+        <div class="offer__countdown">
+            <div class="offer__countdown_heading">
+                До старта Экодиктанта осталось:
+            </div>
+            <div class="offer__countdown_container">
+                <div class="offer__countdown_item" >
+                    <div class="offer__countdown_value" id="days">
+                        00
+                    </div>
+                    <div class="offer__countdown_label">
+                        дней
+                    </div>
+                </div>
+                <div class="offer__countdown_item">
+                    <div class="offer__countdown_value" id="hours">
+                        00
+                    </div>
+                    <div class="offer__countdown_label">
+                        часов
+                    </div>
+                </div>
+                <div class="offer__countdown_item">
+                    <div class="offer__countdown_value" id="minutes">
+                        00
+                    </div>
+                    <div class="offer__countdown_label">
+                        минут
+                    </div>
+                </div>
+                <div class="offer__countdown_item">
+                    <div class="offer__countdown_value" id="seconds">
+                        00
+                    </div>
+                    <div class="offer__countdown_label">
+                        секунд
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="trigger"></div>
+    //= templates/footer.html
+
+	
+
+</div>
+<!-- scripts -->
+	<script src="js/libs.min.js"></script> <!-- main scripts -->
+	<script src="js/main.js"></script> <!-- main scripts -->
+<!-- scripts -->
+</body>
+</html>
