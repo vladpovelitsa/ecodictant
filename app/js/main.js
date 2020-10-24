@@ -1,8 +1,8 @@
 var sections = document.querySelectorAll('.section');
 var offset = innerHeight * 0.9;
-var trigger = document.querySelector("#trigger")
-var header = document.querySelector('.header')
-var body = document.querySelector('body');
+var trigger = document.querySelector("#trigger") || 0;
+var header = document.querySelector('.header') || 0;
+var body = document.querySelector('body') || 0;
 function setAnimation() {
   sections.forEach(function(item) {
     if (item.getBoundingClientRect().top < offset) {
@@ -13,10 +13,10 @@ function setAnimation() {
     }
   })
 
-  if (trigger.getBoundingClientRect().top < 0) {
+  if (trigger.getBoundingClientRect().top < 0 && document.querySelector('.header')) {
     header.classList.add('header--scrolled')
   }
-  else {
+  else if(document.querySelector('.header')) {
     header.classList.remove('header--scrolled')
   }
 }
@@ -122,23 +122,84 @@ $('.committee__slider').slick({
 $('.support__slider').slick({
   dots:false,
   variableWidth: true,
-
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        variableWidth: false,
+        slidesToShow: 2
+      }
+    }
+  ]
 })
 $('.organizations__slider').slick({
   dots:false,
   variableWidth: true,
-
-})
-$('.partners__wrap').slick({
-  variableWidth: true,
+  responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 2
+        }
+      }
+    ]
+  })
+$('.partners__container--organizators .partners__wrap').slick({
   infinite: false,
   mobileFirst: true,
+  slidesToShow: 2,
+
   responsive: [ {
     breakpoint: 1200,
     settings: 'unslick',
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        variableWidth: true,
+
+      }
     }
   ]
 })
+$('.partners__container--general .partners__wrap').slick({
+  infinite: false,
+  mobileFirst: true,
+  slidesToShow: 1,
+
+  responsive: [ {
+    breakpoint: 1200,
+    settings: 'unslick',
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        variableWidth: true,
+
+      }
+    }
+  ]
+})
+$('.partners__container--official .partners__wrap').slick({
+  infinite: false,
+  mobileFirst: true,
+  slidesToShow: 2,
+
+  responsive: [ {
+    breakpoint: 1200,
+    settings: 'unslick',
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        variableWidth: true,
+
+      }
+    }
+  ]
+})
+
 
 function countDown(startYear, startMouth, startDay){
   const startDate = new Date(startYear, startMouth, startDay);

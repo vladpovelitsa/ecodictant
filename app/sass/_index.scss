@@ -2,7 +2,7 @@
     background: url('../img/1.jpg') top left no-repeat;
     background-size: cover;
     padding-top: 322px;
-    padding-bottom: 38px;
+    padding-bottom: 76px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -126,7 +126,11 @@
         
     }
     &--start {
+        align-items: flex-start;
         min-height:calc(100vh - 77px);
+        .offer__countdown {
+            align-self: flex-end;
+        }
     }
     &--inner {
         align-items: flex-start;
@@ -429,6 +433,7 @@
         background: url('../img/tree_icon.png') center right no-repeat #fff;
         padding: 26px 36px 36px;
         margin-bottom: 25px;
+        border-radius: 6px;
         &_heading {
             font-size: 20px;
             font-weight: 700;
@@ -674,9 +679,8 @@
         }
         &--fullpage {
             min-height: calc(100vh - 149px);
-            .offer__heading {
-
-            }
+            padding-top: 375px;
+            padding-bottom: 100px;
         }
         &--start {
             .offer {
@@ -694,6 +698,7 @@
         }
         &__countdown {
             &_container {
+                padding-left: 0;
                 &:before {
                     left: 50%;
                     transform: translate(-50%,-50%);
@@ -714,7 +719,7 @@
                 border-radius: 6px;
                 height: 52px;
                 font-size: 18px;
-                &:last-of-type {
+                &:last-child {
                     margin-bottom: 0;
                 }
             }

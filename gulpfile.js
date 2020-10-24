@@ -108,6 +108,14 @@ gulp.task('html', function(done){
     done()
 })
 
+gulp.task('news', function(done){
+    gulp.src('app/news/*.html')
+    .pipe(rigger())
+    .pipe(gulp.dest('build/news/'))
+
+    done()
+})
+
 gulp.task('convertJPEG2000', function(done) {
   gulp.src('app/img/*.{jpg,jpeg,png}')
     .pipe(jpeg2000())
@@ -131,6 +139,19 @@ gulp.task('imagemin', function(done) {
 
     done()
 })
+gulp.task('imageminNews', function(done) {
+    gulp.src('app/news/pic/*.{jpg,jpeg,png,svg,gif}')
+      .pipe(imagemin())
+      .pipe(gulp.dest('build/news/pic/'));
+  
+      done()
+})
+gulp.task('newsDocx', function(done) {
+    gulp.src('app/news/docx/*')
+      .pipe(gulp.dest('build/news/docx/'));
+  
+      done()
+})
 gulp.task('buildCss', function(done){
     gulp.src('app/css/**/*.css')
     .pipe(gulp.dest('build/css/'));
@@ -148,7 +169,7 @@ gulp.task('buildFonts', function(done){
 })
 
 
-gulp.task('finish', gulp.series('imagemin', 'html','buildCss','buildJs', 'buildFonts'));
+gulp.task('finish', gulp.series('imagemin', 'imageminNews', 'html','news','buildCss','buildJs', 'buildFonts'));
 
 
 gulp.task('default', gulp.series('sass','html', 'scripts', 'styles','serve'));	

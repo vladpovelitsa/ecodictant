@@ -56,10 +56,19 @@
         font-size: 14px;
         line-height: 2;
         margin-bottom: 28px;
+        color:#212529;
         &.article__accent {
             font-weight: 700;
             font-size: 18px;
+            color: #02517A;
             line-height: 1.55;
+        }
+        a {
+            color: #87AB15;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
     
