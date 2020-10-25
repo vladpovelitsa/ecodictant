@@ -100,13 +100,17 @@ $(function($){
 $('.faces__slider').slick({
   dots:true,
   adaptiveHeight: true,
+  autoplay: true,
+  autoplaySpeed: 4000,
 })
 $('.committee__slider').slick({
   dots:false,
   slidesToShow: 3,
+  autoplay: true,
+  autoplaySpeed: 4000,
   responsive: [
     {
-      breakpoint: 1200,
+      breakpoint: 1250,
       settings: {
         slidesToShow:2,
       }
@@ -122,6 +126,8 @@ $('.committee__slider').slick({
 $('.support__slider').slick({
   dots:false,
   variableWidth: true,
+  autoplay: true,
+  autoplaySpeed: 4000,
   responsive: [
     {
       breakpoint: 768,
@@ -135,6 +141,8 @@ $('.support__slider').slick({
 $('.organizations__slider').slick({
   dots:false,
   variableWidth: true,
+  autoplay: true,
+  autoplaySpeed: 4000,
   responsive: [
       {
         breakpoint: 768,
@@ -149,9 +157,10 @@ $('.partners__container--organizators .partners__wrap').slick({
   infinite: false,
   mobileFirst: true,
   slidesToShow: 2,
-
+  autoplay: true,
+  autoplaySpeed: 4000,
   responsive: [ {
-    breakpoint: 1200,
+    breakpoint: 1250,
     settings: 'unslick',
     },
     {
@@ -163,31 +172,33 @@ $('.partners__container--organizators .partners__wrap').slick({
     }
   ]
 })
-$('.partners__container--general .partners__wrap').slick({
-  infinite: false,
-  mobileFirst: true,
-  slidesToShow: 1,
+// $('.partners__container--general .partners__wrap').slick({
+//   infinite: false,
+//   mobileFirst: true,
+//   slidesToShow: 1,
+//   autoplay: true,
+//   autoplaySpeed: 4000,
+//   responsive: [ {
+//       breakpoint: 1250,
+//       settings: 'unslick',
+//     },
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         variableWidth: true,
 
-  responsive: [ {
-    breakpoint: 1200,
-    settings: 'unslick',
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        variableWidth: true,
-
-      }
-    }
-  ]
-})
+//       }
+//     }
+//   ]
+// })
 $('.partners__container--official .partners__wrap').slick({
   infinite: false,
   mobileFirst: true,
   slidesToShow: 2,
-
+  autoplay: true,
+  autoplaySpeed: 4000,
   responsive: [ {
-    breakpoint: 1200,
+    breakpoint: 1250,
     settings: 'unslick',
     },
     {

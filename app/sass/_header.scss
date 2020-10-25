@@ -83,6 +83,8 @@ nav {
     }
     .account_link {
         margin-left: 28px;
+        background: #fff;
+        border-radius: 50%;
     }
     .btn {
         margin-left: 38px;
@@ -95,7 +97,7 @@ nav {
 .show_menu {
     display: none;
 }
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1250px) {
     .show_menu {
         display: block;
         width: 40px;

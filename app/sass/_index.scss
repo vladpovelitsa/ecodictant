@@ -1,3 +1,4 @@
+
 .offer {
     background: url('../img/1.jpg') top left no-repeat;
     background-size: cover;
@@ -126,10 +127,10 @@
         
     }
     &--start {
-        align-items: flex-start;
+        align-items: flex-end;
         min-height:calc(100vh - 77px);
         .offer__countdown {
-            align-self: flex-end;
+            // align-self: center;
         }
     }
     &--inner {
@@ -146,6 +147,12 @@
     .mobile_btns {
         display: none;
     }
+}
+@media screen and (min-width: 2000px) {
+    .offer {
+        background-size: auto;
+        background-position: -100% center;
+    }        
 }
 
 .faces {
@@ -209,6 +216,25 @@
         margin-top: auto;
     }
 }
+@media screen and (min-width: 2230px){
+    .faces {
+        &__item {
+            padding-left: calc(50vw - 585px);
+            position: relative;
+        }
+        &__text {
+            margin-left: 0;
+        }
+        &__img {
+            position: absolute;
+            bottom:0;
+            left: 0;
+        }
+        .slick-dots {
+            padding-left: calc(50vw - 585px);
+        }
+    }
+}
 
 .partners {
     padding-top: 54px;
@@ -220,7 +246,7 @@
     &__container {
 
         &--general {
-            margin-left: 124px;
+            margin-left: 80px;
         }
         &--official {
             width: 100%;
@@ -252,7 +278,7 @@
         margin-bottom: 89px;
     }
     &__logo {
-        margin-right: 100px;
+        margin-right: 80px;
         &:last-of-type {
             margin-right: 0;
         }
@@ -467,6 +493,7 @@
     padding-top: 50px;
     padding-bottom: 186px;
     background: url('../img/2.jpg') center top no-repeat;
+    background-size: cover;
     .section_heading {
         margin-bottom: 50px;
     }
@@ -539,7 +566,7 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
     .offer {
         background-position:55% 50%;
         padding-top: 408px;
@@ -564,12 +591,13 @@
         }
         &__text {
             padding-bottom: 0;
-            // margin-bottom: auto;
+            margin-bottom: auto;
             // margin-bottom: -100px;
         }
         &__img {
             // margin-top: auto;
             align-self: flex-start;
+            margin-top: auto;
         }
         &__desc {
             margin-bottom: 40px;
@@ -597,7 +625,14 @@
         &__container {
             max-width: 100%;
             &--general {
+                width: 100%;
                 margin-left: 0;
+                .partners__logo {
+                    width: 100%;
+                    img {
+                        margin: 0 auto;
+                    }
+                }
             }
         }
         &__header {
@@ -620,10 +655,18 @@
                         right: 0;
                     }
                 }
+                &-track {
+                    display: flex !important;
+                    align-items: center;
+                }
             }
         }
         &__logo {
-            margin-right: 76px !important;
+            margin-right: 0 !important;
+            
+            img {
+                margin: 0 auto;
+            }
         }
     }       
     .organizations {
