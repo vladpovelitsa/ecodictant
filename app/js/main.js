@@ -3,26 +3,26 @@ var offset = innerHeight * 0.9;
 var trigger = document.querySelector("#trigger") || 0;
 var header = document.querySelector('.header') || 0;
 var body = document.querySelector('body') || 0;
-function setAnimation() {
-  sections.forEach(function(item) {
-    if (item.getBoundingClientRect().top < offset) {
-      item.classList.add('animated')
-      var timeout = setTimeout(function(){
-        item.classList.add('animation_ends')
-      },7000)
-    }
-  })
+// function setAnimation() {
+//   sections.forEach(function(item) {
+//     if (item.getBoundingClientRect().top < offset) {
+//       item.classList.add('animated')
+//       var timeout = setTimeout(function(){
+//         item.classList.add('animation_ends')
+//       },7000)
+//     }
+//   })
 
-  if (trigger.getBoundingClientRect().top < 0 && document.querySelector('.header')) {
-    header.classList.add('header--scrolled')
-  }
-  else if(document.querySelector('.header')) {
-    header.classList.remove('header--scrolled')
-  }
-}
+//   if (trigger.getBoundingClientRect().top < 0 && document.querySelector('.header')) {
+//     header.classList.add('header--scrolled')
+//   }
+//   else if(document.querySelector('.header')) {
+//     header.classList.remove('header--scrolled')
+//   }
+// }
 
-document.addEventListener('scroll', setAnimation)
-setAnimation()
+// document.addEventListener('scroll', setAnimation)
+// setAnimation()
 
 function modalControls(e){
   var body = document.querySelector('body');
@@ -57,7 +57,7 @@ function navControls() {
       }
       else {
         var notHide = false;
-        event.path.forEach((item)=>{
+        event.path.forEach(function(item){
             if(item == document.querySelector('.search_form')) {
               notHide = true
               return notHide
@@ -80,10 +80,10 @@ function tabs(e){
   e = event.target
   var currentTabs = e.parentNode.parentNode
   if (e.classList.contains('tab_toggler')) {
-    currentTabs.querySelectorAll('.tab_content').forEach((item) => {
+    currentTabs.querySelectorAll('.tab_content').forEach(function(item) {
       item.classList.remove('active');
     })
-    currentTabs.querySelectorAll('.tab_toggler').forEach((item) => {
+    currentTabs.querySelectorAll('.tab_toggler').forEach(function(item) {
       item.classList.remove('active');
     })
     e.classList.add('active')
@@ -197,7 +197,7 @@ $('.organizations__slider').slick({
 function countDown(startYear, startMouth, startDay){
   const startDate = new Date(startYear, startMouth, startDay);
   
-  let tic = setInterval(() => {
+  let tic = setInterval(function() {
     let currentDate = new Date;
     let daysLeft = (startDate - currentDate) / 8.64e+7;
     let hoursLeft = ((startDate - currentDate) / 8.64e+7 - Math.floor(daysLeft)) * 24;
@@ -223,7 +223,8 @@ if(document.querySelector('.offer__countdown_container')){
   countDown(2020, 10, 15);
 }
 
-initPawSelect('.paw-select')
+console.log(navigator.userAgent)
+
 
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */

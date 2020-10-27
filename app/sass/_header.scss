@@ -77,17 +77,21 @@ nav {
                 background: #008DD2;
             }
         }
-        li:not(:first-of-type) {
+        li {
             margin-left: 5px;
+            &:first-of-type {
+                margin-left: 0;
+            }
         }
+
     }
     .account_link {
-        margin-left: 28px;
+        margin-left: 24px;
         background: #fff;
         border-radius: 50%;
     }
     .btn {
-        margin-left: 38px;
+        margin-left: 25px;
         width: 100%;
         max-width: 220px;
         height: 44px;
@@ -157,9 +161,11 @@ nav {
             flex-direction:column;
             align-items: center;
             li {
+                margin-bottom: 25px;
+
                 margin-left: 0 !important;
-                &:not(:last-of-type) {
-                    margin-bottom: 25px;
+                &:last-of-type {
+                    margin-bottom: 0;
                 }
             }
         }

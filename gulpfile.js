@@ -28,10 +28,8 @@ var gulp = require('gulp'),
 gulp.task('sass', function(done) {
     gulp.src("app/sass/**/*.scss")
     	.pipe(sourcemaps.init())
-        .pipe(rename({suffix: '.min'}))
         .pipe(sass({
         	errorLogToConsole: true,
-        	outputStyle: 'compressed',
         }))
         .on('error', console.error.bind(console))
         .pipe(autoprefixer({
@@ -49,13 +47,9 @@ gulp.task('scripts', function(done){
     gulp.src([
         'app/libs/jquery/dist/jquery.min.js', 
         'app/libs/slick-carousel/slick/slick.min.js', 
-        'app/libs/paw-select/paw-select.js',
-        // 'app/libs/paw-range/paw-range.js',
-        'app/libs/lightbox/dist/js/lightbox.min.js',
         'app/libs/jquery.maskedinput.js',
         ])
-    .pipe(concat('libs.min.js'))
-    .pipe(uglify())
+    .pipe(concat('libs.js'))
     .pipe(gulp.dest('app/js/'))
     done()
 })
@@ -64,10 +58,6 @@ gulp.task('styles', function(done){
 
     gulp.src([
         'app/libs/slick-carousel/slick/slick.scss',
-        'app/libs/paw-select/paw-select.scss',
-        // 'app/libs/paw-range/paw-range.scss',
-        'app/libs/lightbox/dist/css/lightbox.min.css',
-
         ])
     .pipe(concat('libs.min.css'))
     .pipe(sass({
@@ -172,4 +162,4 @@ gulp.task('buildFonts', function(done){
 gulp.task('finish', gulp.series('imagemin', 'imageminNews', 'html','news','buildCss','buildJs', 'buildFonts'));
 
 
-gulp.task('default', gulp.series('sass','html', 'scripts', 'styles','serve'));	
+gulp.task('default', gulp.series('sass','html','serve'));	
