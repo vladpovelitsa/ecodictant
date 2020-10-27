@@ -83,6 +83,7 @@
         font-size: 20px;
         text-align: center;
         margin-bottom: 39px;
+        color:#008DD2;
     } 
     &__buttons {
         display: flex;
@@ -94,11 +95,87 @@
             height: 52px;
         }
     }
+    &_form {
+        padding-bottom: 70px;
+
+        .reg__subheader {
+            text-align: left;
+            margin-bottom: 58px;
+        }
+    }
 }
 
 
 @media screen and (max-width: 767px) {
     .reg {
         padding-bottom: 50px;
+    }
+}
+
+.reg_field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+    &-label {
+        min-width: 175px;
+        display: block;
+        margin-right: 22px;
+        font-size: 14px;
+        color:#212529;
+    }
+    &-input {
+        width: 100%;
+        display: block;
+        border:1px solid #DDE4EB;
+        background: #F6F6FD;
+        padding: 15px 50px 15px 24px;
+        color:#212529;
+        font-size: 14px;
+        
+        &::placeholder {
+            color: #7F8FA4;
+        }
+    }
+    &-organizations {
+        display: none;
+        &.active {
+            display: flex;
+        }
+    }
+    .policy_text {
+        font-size: 14px;
+        // line-height: 1;
+        a {
+            display: inline-block;
+            font-weight: 700;
+            color: #02517A;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .btn {
+        width: 100%;
+        max-width: 370px;
+        height: 52px;
+    } 
+}
+
+@media screen and (max-width: 767px) {
+    .reg_field {
+        flex-direction: column;
+        align-items: flex-start;
+        &-input {
+            margin-top: 15px;
+        }
+        .custom-select {
+            margin-top: 15px;
+            .reg_field-input {
+                margin-top: 0;
+            }
+        }
+        .policy_text {
+            font-size: 12px;
+        }
     }
 }
