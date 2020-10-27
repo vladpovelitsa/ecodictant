@@ -135,6 +135,12 @@
         &::placeholder {
             color: #7F8FA4;
         }
+        &.select-selected {
+            color:#7F8FA4;
+            &.active {
+                color:#212529;
+            }   
+        }
     }
     &-organizations {
         display: none;
