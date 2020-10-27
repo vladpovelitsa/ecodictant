@@ -153,64 +153,46 @@ $('.organizations__slider').slick({
       }
     ]
   })
-$('.partners__container--organizators .partners__wrap').slick({
-  infinite: false,
-  mobileFirst: true,
-  slidesToShow: 2,
-  autoplay: true,
-  autoplaySpeed: 4000,
-  responsive: [ {
-    breakpoint: 1250,
-    settings: 'unslick',
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        variableWidth: true,
-
+  $('.partners__container--organizators .partners__wrap').slick({
+    infinite: false,
+    mobileFirst: true,
+    slidesToShow: 2,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [ {
+      breakpoint: 1250,
+      settings: 'unslick',
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: true,
+  
+        }
       }
-    }
-  ]
-})
-// $('.partners__container--general .partners__wrap').slick({
-//   infinite: false,
-//   mobileFirst: true,
-//   slidesToShow: 1,
-//   autoplay: true,
-//   autoplaySpeed: 4000,
-//   responsive: [ {
-//       breakpoint: 1250,
-//       settings: 'unslick',
-//     },
-//     {
-//       breakpoint: 768,
-//       settings: {
-//         variableWidth: true,
+    ]
+  })
 
-//       }
-//     }
-//   ]
-// })
-$('.partners__container--official .partners__wrap').slick({
-  infinite: false,
-  mobileFirst: true,
-  slidesToShow: 2,
-  autoplay: true,
-  autoplaySpeed: 4000,
-  responsive: [ {
-    breakpoint: 1250,
-    settings: 'unslick',
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        variableWidth: true,
+  $('.partners__container--official .partners__wrap').slick({
+    infinite: false,
+    mobileFirst: true,
+    slidesToShow: 2,
+    autoplay: true,
+    autoplaySpeed: 4000,
 
+    responsive: [ {
+      breakpoint: 1250,
+      settings: 'unslick',
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: true,
+  
+        }
       }
-    }
-  ]
-})
-
+    ]
+  })
 
 function countDown(startYear, startMouth, startDay){
   const startDate = new Date(startYear, startMouth, startDay);

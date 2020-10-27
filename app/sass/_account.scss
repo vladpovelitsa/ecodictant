@@ -1,0 +1,104 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+    &__form {
+        max-width: 566px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 17px;   
+        .btn {
+            max-width: 320px;
+            height: 52px;
+            margin: 0 auto;
+            padding: 0 56px;
+        }
+    }
+    &__reg_link {
+        font-size: 18px;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 16px;
+        color:#02517A;
+        &:hover {
+            text-decoration: underline;
+        }    }
+    &__restore_link {
+        font-size: 14px;
+        color: #7F8FA4;
+        text-align: center;
+        line-height: 2.15;
+        strong {
+            display: block;
+            color: #02517A;
+            font-weight: 700;
+            display: block;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.input_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    &_label {
+        display: block;
+        color:#212529;
+        margin-bottom: 14px;
+    }
+    .input_block_field {
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;
+        color:#212529;
+        border: 1px solid #DDE4EB;
+        background-color: #F6F6FD;
+        padding: 15px 15px 18px;
+        text-align: center;
+        &::placeholder {
+            color:#7F8FA4;
+        }
+    }
+    &-error {
+        .input_block_field {
+            border: 1px solid #FF0000;
+        }
+        .input_block_label {
+            color: #ff0000;
+        }
+
+
+    }
+}
+.reg { 
+    padding-bottom: 212px;
+    &__subheader {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 39px;
+    } 
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        .btn {
+            width: 100%;
+            max-width: 172px;
+            margin: 0 12px;
+            height: 52px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .reg {
+        padding-bottom: 50px;
+    }
+}

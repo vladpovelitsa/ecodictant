@@ -1,10 +1,14 @@
 .footer {
     display: flex;
+    justify-content: space-between;
     background: #F6F6FD;
     padding-top: 26px;
     padding-bottom: 27px;
     font-size: 12px;
     line-height: 2;
+    margin-top: auto;
+    color: #7F8FA4;
+
     a {
         color: #7F8FA4;
     }
@@ -22,13 +26,13 @@
         }
     }
     &__copyright {
-        margin-right: 28px;
+        margin-right: 10px;
     }
     &__link {
-        margin-right: auto;
+        margin-right: 10px;
     }
     &__regulation {
-        margin-right: 40px;
+        margin-right: 10px;
     }
 }
 

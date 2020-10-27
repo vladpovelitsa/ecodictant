@@ -92,6 +92,11 @@
 	.section_heading {
 		font-size: 38px;
 	}
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
 /*global*/
 // slick
 	.slick {
@@ -152,9 +157,6 @@
 	.center {
 		padding-left: calc(50vw - 360px);
 		padding-right: calc(50vw - 360px);
-	}
-	body, html {
-		// overflow-x: hidden;
 	}
 }
 

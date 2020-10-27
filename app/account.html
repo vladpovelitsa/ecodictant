@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>
+		Всероссийский экологический диктант
+	</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+	
+	<link rel="stylesheet" type="text/css" href="css/libs.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+<div class="wrapper">
+	
+    //= templates/header.html
+    
+    <div class="center offer offer--login" >
+        <div class="content ">
+            <h1 class="offer__heading offer__heading--login">
+                Личный кабинет 
+            </h1>
+            
+        </div>
+    </div>
+    <section class="login center">
+        <form action="" class="login__form">
+            <label class="input_block">
+                <span class="input_block_label">
+                    Ваш Email
+                </span>
+                <input type="email" placeholder="Укажите свой email" class="input_block_field">
+            </label>
+            <label class="input_block">
+                <span class="input_block_label">
+                    Ваш пароль
+                </span>
+                <input type="email" placeholder="Введите пароль" class="input_block_field">
+            </label>
+            <button class="btn btn--green">
+                Войти в личный кабинет
+            </button>
+        </form>
+        <a href="reg.html" class="login__reg_link">
+            Зарегистрироваться
+        </a>
+        <a href="restore.html" class="login__restore_link">
+            Забыли пароль?
+            <strong>
+                Восстановить пароль
+            </strong>
+        </a>
+    </section>
+	<div id="trigger"></div>
+    
+	//= templates/footer.html
+        
+
+</div>
+<!-- scripts -->
+	<script src="js/libs.min.js"></script> <!-- main scripts -->
+	<script src="js/main.js"></script> <!-- main scripts -->
+<!-- scripts -->
+</body>
+</html>

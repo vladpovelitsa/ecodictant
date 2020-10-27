@@ -34,6 +34,10 @@
         &:only-child {
             margin-bottom: 0;
         }
+        &--login {
+            text-align: center;
+            max-width: 100%;
+        }
     }
     &__date {
         font-size: 20px;
@@ -124,17 +128,23 @@
     &--fullpage {
         align-items: flex-start;
         min-height:calc(100vh - 77px);
-        
     }
     &--start {
         align-items: flex-end;
         min-height:calc(100vh - 77px);
-        .offer__countdown {
-            // align-self: center;
-        }
+   
     }
     &--inner {
         align-items: flex-start;
+    }
+    &--login {
+        align-items: flex-start;
+        padding-top: 371px;
+        padding-bottom: 21px;
+
+        .content {
+            width: 100%;
+        }
     }
     .content--404,
     .content--start {
@@ -279,6 +289,13 @@
     }
     &__logo {
         margin-right: 80px;
+        a {
+            display: block;
+            min-width: 40px;
+        }
+        img {
+            min-width: 40px;
+        }
         &:last-of-type {
             margin-right: 0;
         }
@@ -663,8 +680,12 @@
         }
         &__logo {
             margin-right: 0 !important;
-            
+            a {
+                display: block;
+                min-width: 40px;;
+            }
             img {
+                min-width: 40px;;
                 margin: 0 auto;
             }
         }
@@ -773,6 +794,7 @@
             padding-top: 100px;
             max-width: 350px;
             margin: 0 auto;
+            min-height: 410px;
         }
         &__desc {
             margin-bottom: 20px;
@@ -788,6 +810,31 @@
         }
         &__profession {
             font-size: 16px;
+        }
+    }
+
+    .partners__container {
+        &--general .partners__logo {
+            max-width: 45%;
+        }
+        &--organizators {
+            .slick-slider .slick-arrow {
+                top: -60px;
+            }
+        }
+        &--official {
+            .slick-slider .slick-arrow {
+                top: -95px;
+            }
+        }
+    }
+    .partners__logo {
+        a {
+            display: block;
+            min-width: 40px;;
+        }
+        img {
+            min-width: 40px;;
         }
     }
     .committee {
