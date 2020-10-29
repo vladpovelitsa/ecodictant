@@ -292,8 +292,8 @@
 .partners {
     padding-top: 54px;
     padding-bottom: 0px;
-    background: url('../img/3.jpg') center no-repeat;
-    background-size: cover;
+    // background: url('../img/3.jpg') center no-repeat;
+    // background-size: cover;
     display: flex;
     flex-wrap: wrap;
     &__container {
@@ -536,8 +536,9 @@
 .reg_info {
     padding-top: 50px;
     padding-bottom: 65px;
-    background: url('../img/4.jpg') center no-repeat;
-    background-size: cover;
+    // background: url('../img/4.jpg') center no-repeat;
+    background: #02517A;
+    // background-size: cover;
     &__heading {
         font-size: 38px;
         color: #fff;
@@ -581,8 +582,7 @@
 .contacts {
     padding-top: 50px;
     padding-bottom: 186px;
-    background: url('../img/2.jpg') center top no-repeat;
-    background-size: cover;
+    background: url('../img/2.jpg') center bottom no-repeat;
     .section_heading {
         margin-bottom: 50px;
     }

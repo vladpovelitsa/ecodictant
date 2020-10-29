@@ -1378,8 +1378,6 @@ nav {
 .partners {
   padding-top: 54px;
   padding-bottom: 0px;
-  background: url("../img/3.jpg") center no-repeat;
-  background-size: cover;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1615,8 +1613,7 @@ nav {
 .reg_info {
   padding-top: 50px;
   padding-bottom: 65px;
-  background: url("../img/4.jpg") center no-repeat;
-  background-size: cover; }
+  background: #02517A; }
   .reg_info__heading {
     font-size: 38px;
     color: #fff;
@@ -1649,8 +1646,7 @@ nav {
 .contacts {
   padding-top: 50px;
   padding-bottom: 186px;
-  background: url("../img/2.jpg") center top no-repeat;
-  background-size: cover; }
+  background: url("../img/2.jpg") center bottom no-repeat; }
   .contacts .section_heading {
     margin-bottom: 50px; }
   .contacts__wrap {
