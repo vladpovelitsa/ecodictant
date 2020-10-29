@@ -138,6 +138,9 @@
         &:last-of-type {
             margin-bottom: 0;
         }
+        &--green {
+            color:#87AB15;
+        }
     }
     &__info_text {
         font-size: 20px;
@@ -147,6 +150,11 @@
     &--fullpage {
         align-items: flex-start;
         min-height:calc(100vh - 77px);
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 2;
+        color:#212529;   
     }
     &--start {
         align-items: flex-start;
@@ -170,6 +178,12 @@
     &--info {
         padding-top: 420px;
         padding-bottom: 20px;
+        .content {
+            width: 100%;
+        }
+    }
+    &--offline {
+        padding-bottom: 37px;
         .content {
             width: 100%;
         }
@@ -372,7 +386,7 @@
         &:before {
             content: '';
             width: 44px;
-            height: 1px;
+            height: 2px;
             background: #7F8FA4;
             border-radius: 1px;
             position: absolute;

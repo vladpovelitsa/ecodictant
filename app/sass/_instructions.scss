@@ -1,0 +1,128 @@
+.instructions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    &:nth-of-type(odd) {
+        background-color: #F6F6FD;
+    }
+    &__item {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &-steps {
+            max-width: 69%;
+        }
+        &-docs {
+            max-width: 30%;
+        }
+        &-files {
+            display: block;
+            width: 49%;
+        }
+    }
+    &__heading {
+        font-size: 20px;
+        line-height: 1.6;
+        font-weight: 700;
+        color: #02517A;
+        margin-bottom: 57px;
+        width: 100%;
+    }
+    &__steps {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &_item {
+            width: 24%;
+        }
+    }
+    &__img {
+        margin-bottom: 20px;
+    }
+    &__name {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.6;
+        color: #87AB15;
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        color:#212529;
+    }
+    &__doc {
+        &_wrap {
+            max-width: 49%;
+            display: flex;
+            flex-direction: column;
+            .btn {
+                margin-top: auto;
+                max-width: 127px;
+                height: 52px;
+            }
+        }
+        &_img {
+            margin-bottom: 20px;
+            display: block;
+            img {
+                box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            }
+        }
+    }
+    &__file {
+        display: block;
+        padding: 20px 20px 25px 75px;
+        border-bottom: 1px solid #DDE4EB;
+        position: relative;
+        .instructions__text {
+            margin-bottom: 0;
+        }
+        &:before {
+            content:"";
+            display: block;
+            width: 43px;
+            height: 52px;
+            position: absolute;
+            top: 15px;
+            left: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42.562' height='52' viewBox='0 0 42.562 52'%3E%3Cg id='_60492' data-name='60492' transform='translate(-86.9)'%3E%3Cpath id='Path_7080' data-name='Path 7080' d='M231.378,108.4h-1.52v37.355a4.508,4.508,0,0,1-4.5,4.5H197.7v1.385a2.874,2.874,0,0,0,2.873,2.873h30.8a2.874,2.874,0,0,0,2.873-2.873V111.273A2.869,2.869,0,0,0,231.378,108.4Z' transform='translate(-104.783 -102.514)' fill='%237f8fa4'/%3E%3Cpath id='Path_7081' data-name='Path 7081' d='M105.167,46.114h15.4a2.874,2.874,0,0,0,2.873-2.872V2.873A2.874,2.874,0,0,0,120.568,0H100.047V.95a2.79,2.79,0,0,1,.016.3V9.123a4.049,4.049,0,0,1-4.046,4.046H88.149c-.081,0-.168-.005-.25-.011h-1V43.241a2.874,2.874,0,0,0,2.873,2.872h15.395Zm.581-9.764H95.708a1.358,1.358,0,0,1,0-2.715h10.046a1.358,1.358,0,1,1-.005,2.715Zm10.046-6.929H95.708a1.358,1.358,0,0,1,0-2.715h20.086a1.358,1.358,0,0,1,0,2.715ZM95.708,19.348h20.086a1.358,1.358,0,0,1,0,2.715H95.708a1.358,1.358,0,0,1,0-2.715Z' transform='translate(0)' fill='%237f8fa4'/%3E%3Cpath id='Path_7082' data-name='Path 7082' d='M88.76,12.3h7.89a2.411,2.411,0,0,0,2.389-2.389v-7.9A1.209,1.209,0,0,0,97.823.8a1.177,1.177,0,0,0-.847.358L87.9,10.232A1.209,1.209,0,0,0,88.76,12.3Z' transform='translate(-0.611 -0.757)' fill='%237f8fa4'/%3E%3C/g%3E%3C/svg%3E%0A") center no-repeat;
+        }
+        &:last-of-type {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .instructions {
+        flex-wrap: wrap;
+        &__item {
+            &-steps {
+                max-width: 100%;
+            }
+            &-docs {
+                max-width: 100%;
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .instructions {
+        &__item {
+            &-files {
+                width: 100%;
+                margin-bottom: 40px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}   

@@ -1,0 +1,125 @@
+.clip_cover {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    background-color: #000000;
+    margin-bottom: 36px;
+}
+
+.video__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    display: none;
+    padding: 0;
+    width: 68px;
+    height: 48px;
+    border: none;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: block;
+}
+.video__button-shape {
+    fill: #212121;
+    fill-opacity: 0.8;
+}
+
+.video__button-icon {
+    fill: #ffffff;
+}
+
+.video__button:focus {
+    outline: none;
+}
+
+.clip_cover:hover .video__button-shape,
+.video__button:focus .video__button-shape {
+    fill: #ff0000;
+    fill-opacity: 1;
+}
+
+.lessons {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &:nth-of-type(odd) {
+        background: #F6F6FD;
+    }
+    .section_heading {
+        margin-bottom: 54px;
+        padding-right: 90px;
+    }
+    &__item {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-right: 25px;
+        &-name {
+            color:#87AB15;
+        }
+        &-text {
+            color: #212529;
+        }
+        &-link {
+            display: block;
+            padding-left: 75px;
+            position: relative;
+            margin-top: 50px;
+            &:before {
+                content:'';
+                display: block;
+                width: 43px;
+                height: 52px;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42.562' height='52' viewBox='0 0 42.562 52'%3E%3Cg id='_60492' data-name='60492' transform='translate(-86.9)'%3E%3Cpath id='Path_7080' data-name='Path 7080' d='M231.378,108.4h-1.52v37.355a4.508,4.508,0,0,1-4.5,4.5H197.7v1.385a2.874,2.874,0,0,0,2.873,2.873h30.8a2.874,2.874,0,0,0,2.873-2.873V111.273A2.869,2.869,0,0,0,231.378,108.4Z' transform='translate(-104.783 -102.514)' fill='%237f8fa4'/%3E%3Cpath id='Path_7081' data-name='Path 7081' d='M105.167,46.114h15.4a2.874,2.874,0,0,0,2.873-2.872V2.873A2.874,2.874,0,0,0,120.568,0H100.047V.95a2.79,2.79,0,0,1,.016.3V9.123a4.049,4.049,0,0,1-4.046,4.046H88.149c-.081,0-.168-.005-.25-.011h-1V43.241a2.874,2.874,0,0,0,2.873,2.872h15.395Zm.581-9.764H95.708a1.358,1.358,0,0,1,0-2.715h10.046a1.358,1.358,0,1,1-.005,2.715Zm10.046-6.929H95.708a1.358,1.358,0,0,1,0-2.715h20.086a1.358,1.358,0,0,1,0,2.715ZM95.708,19.348h20.086a1.358,1.358,0,0,1,0,2.715H95.708a1.358,1.358,0,0,1,0-2.715Z' transform='translate(0)' fill='%237f8fa4'/%3E%3Cpath id='Path_7082' data-name='Path 7082' d='M88.76,12.3h7.89a2.411,2.411,0,0,0,2.389-2.389v-7.9A1.209,1.209,0,0,0,97.823.8a1.177,1.177,0,0,0-.847.358L87.9,10.232A1.209,1.209,0,0,0,88.76,12.3Z' transform='translate(-0.611 -0.757)' fill='%237f8fa4'/%3E%3C/g%3E%3C/svg%3E%0A") center no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    &__slider {
+        position: relative;
+        .slick-arrow {
+            top: -90px;
+            right: 0;
+            position: absolute;
+            &.slick-prev {
+                right: 45px;
+                left: unset;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .lessons {
+        .section_heading {
+            font-size: 18px;
+        }
+        &__slider {
+            position: relative;
+            .slick-arrow {
+                top: -85px;
+            }
+        }
+    }
+}
