@@ -1,4 +1,5 @@
 .map {
+    padding-bottom: 50px;
     &__svg {
         margin-top: 100px;
         margin-bottom: 50px;
@@ -11,6 +12,37 @@
 
         &_dropdown {
             display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%,0);
+            z-index: 96;
+            background: #fff;
+            border-radius:3px;
+            box-shadow: 0 5px 10px rgba($color: #7F8FA4, $alpha: .15);
+            padding: 22px;
+            min-width: 174px;
+            width: 100%;
+            max-width: 310px;
+            &.map__sort_dropdown--active {
+                display: block;
+            }
+        }
+        &_item {
+            display: block;
+            width: 100%;
+            background:none;
+            border: none;
+            font-size: 14px;
+            text-align: left;
+            margin-bottom: 20px;
+            color:#212529;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            &:hover {
+                color:#02517A;
+            }
         }
         &_toggler {
             border: none;
@@ -21,6 +53,7 @@
             margin-left: 5px;
             svg {
                 margin-left: 10px;
+                pointer-events: none;
             }
             &:hover {
                 text-decoration: underline;
@@ -30,6 +63,7 @@
             display: flex;
             margin-left: 37px;
             color: #7F8FA4;
+            position: relative;
         }
     }
 }
@@ -93,7 +127,15 @@
             line-height: 2.2;
         }
         &-item {
-            width: 33%;
+            &:nth-of-type(1){
+                width: 32%;
+            }
+            &:nth-of-type(2){
+                width: 33%;
+            }
+            &:nth-of-type(3){
+                width: 26%;
+            }
         }
     }
 }
@@ -132,7 +174,7 @@
                 }
             }
             &-item {
-                width: 100%;
+                width: 100% !important;
                 margin-bottom: 20px;
                 &:last-of-type {
                     margin-bottom: 0;

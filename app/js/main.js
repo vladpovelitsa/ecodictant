@@ -416,8 +416,6 @@ findVideos();
 $('.lessons__slider').slick({
   dots:false,
   slidesToShow: 3,
-  autoplay: true,
-  autoplaySpeed: 4000,
   responsive: [
     {
       breakpoint: 1250,
@@ -433,3 +431,27 @@ $('.lessons__slider').slick({
     },
   ]
 })
+
+function filtersDropdown() {
+  var el = event.target;
+
+  if (el.classList.contains('map__sort_toggler')) {
+    var parent = el.closest('.map__sort_wrap')
+    if(parent.querySelector('.map__sort_dropdown--active')){
+      parent.querySelector('.map__sort_dropdown--active').classList.remove('map__sort_dropdown--active')
+    }
+    else {
+      document.querySelectorAll('.map__sort_dropdown').forEach(function(item){
+        item.classList.remove('map__sort_dropdown--active')
+      })
+      parent.querySelector('.map__sort_dropdown').classList.add('map__sort_dropdown--active')
+    }
+  }
+  else if(document.querySelector('.map__sort_dropdown')) {
+    document.querySelectorAll('.map__sort_dropdown').forEach(function(item){
+      item.classList.remove('map__sort_dropdown--active')
+    })
+  }
+}
+
+document.addEventListener('click', filtersDropdown)

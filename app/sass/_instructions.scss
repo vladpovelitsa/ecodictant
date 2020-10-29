@@ -101,6 +101,8 @@
 @media screen and (max-width: 1200px) {
     .instructions {
         flex-wrap: wrap;
+        padding-left:0;
+        padding-right: 0;
         &__item {
             &-steps {
                 max-width: 100%;
@@ -108,7 +110,12 @@
             &-docs {
                 max-width: 100%;
             }
-            
+        }
+        &__steps,
+        &__item-steps .instructions__heading,
+        &__item-docs,
+        &__item-files {
+            padding: 0 50px;
         }
     }
 }
@@ -123,6 +130,12 @@
                     margin-bottom: 0;
                 }
             }
+        }
+        &__steps,
+        &__item-steps .instructions__heading,
+        &__item-docs,
+        &__item-files {
+            padding: 0 15px;
         }
     }
 }   
