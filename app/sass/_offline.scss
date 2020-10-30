@@ -3,6 +3,16 @@
     &__svg {
         margin-top: 100px;
         margin-bottom: 50px;
+
+        .st1 {
+            &.active {
+                &, * {
+                    stroke-width: 2;
+                    fill-opacity: 1 !important;
+                    fill: #1E3685;
+                }
+            }
+        }
     }
     &__sort {
         display: flex;
@@ -148,6 +158,9 @@
             margin-left: 0;
             margin-top: 25px;
         }
+    }
+    .map__svg {
+        margin-top: 50px;
     }
     .places {
         &__info {

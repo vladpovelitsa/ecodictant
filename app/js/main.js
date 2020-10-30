@@ -455,3 +455,20 @@ function filtersDropdown() {
 }
 
 document.addEventListener('click', filtersDropdown)
+
+
+function mapHightlighter() {
+  var el = event.target;
+
+  if (el.classList.contains('st1')){
+    document.querySelectorAll('st1').forEach(function(item){
+      item.classList.remove('active')
+    })
+    el.classList.add('active')
+  }
+
+  console.log(el)
+  
+}
+
+document.addEventListener('click', mapHightlighter)
