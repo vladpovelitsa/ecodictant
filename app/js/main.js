@@ -255,7 +255,7 @@ for (i = 0; i < l; i++) {
         var y, i, k, s, h, sl, yl;
         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
         sl = s.length;
-        s.value = this.getAttribute('data-value')
+        s.setAttribute('value', this.getAttribute('data-value'))
         showHiddenSelect(this)
         h = this.parentNode.previousSibling;
         for (i = 0; i < sl; i++) {
