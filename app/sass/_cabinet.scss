@@ -106,7 +106,8 @@
         margin-bottom: 43px;
         max-width: 175px;
         img {
-            box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16)
+            box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+            width: 100%;
         }
     }
 }

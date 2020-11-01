@@ -3084,7 +3084,8 @@ nav {
   margin-bottom: 43px;
   max-width: 175px; }
   .diploma__img img {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    width: 100%; }
 
 .mobile_break {
   display: none; }
@@ -3240,7 +3241,7 @@ nav {
       width: 100%;
       max-width: 220px;
       height: 52px;
-      margin-top: auto;
+      margin-top: 27px;
       font-size: 18px; }
   .pass_page__file {
     display: -webkit-box;
@@ -3293,6 +3294,8 @@ nav {
 @media screen and (max-width: 1200px) {
   .pass_page__categories-item {
     width: 100%; }
+    .pass_page__categories-item .btn {
+      margin-top: auto; }
   .pass_instructions {
     padding-left: 0;
     padding-right: 0;
@@ -3527,8 +3530,8 @@ nav {
     .test__pagination {
       display: none; }
     .test__answers {
-      padding-left: 15px;
-      padding-right: 15px; }
+      padding-left: 32px;
+      padding-right: 32px; }
       .test__answers-radio {
         width: 100%; }
     .test__question {

@@ -57,7 +57,7 @@
             width: 100%;
             max-width: 220px;
             height: 52px;
-            margin-top: auto;
+            margin-top: 27px;
             font-size: 18px;
         }
     }
@@ -119,6 +119,9 @@
         &__categories {
             &-item {
                 width: 100%;
+                .btn {
+                    margin-top: auto;
+                }
             }
         }
     }
