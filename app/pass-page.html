@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>
+		Всероссийский экологический диктант
+	</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+	
+	<link rel="stylesheet" href="libs/slick-carousel/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+<div class="wrapper">
+	
+    //= templates/header.html
+    
+    <div class="center offer offer--pass" >
+        <div class="content ">
+            <h1 class="offer__heading">
+                Пройти Экодиктант
+            </h1>
+            
+        </div>
+    </div>
+	<div id="trigger"></div>
+
+    <section class="pass_page center">
+        <p>
+            <strong>
+                Мы приветствуем Вас на Всероссийском экологическом диктанте!
+            </strong>
+        </p>
+        <p>
+            На прохождение Экодиктанта участнику дается 45 минут и одна попытка. Перед началом Вам нужно выбрать одну из категорий, которая соответствует Вашим знаниям (изменить категорию после нажатия кнопки «Старт» будет нельзя). Категории отличаются по сложности вопросов: от низкой (для подростков 12-17 лет) до высокой (для экспертов, студентов, специалистов, руководителей в экологической сфере).
+        </p>
+        <p>
+            <strong>
+                Желаем Вам успехов!
+            </strong>
+        </p>
+
+        <div class="pass_page__categories">
+            <div class="pass_page__categories-item">
+                <picture class="pass_page__categories-img">
+                    <img src="img/start_img-1.jpg" alt="#">
+                </picture>
+                <div class="pass_page__categories-info">
+                    <h6 class="pass_page__categories-name">
+                        Подростки
+                    </h6>
+                    <p class="pass_page__categories-text">
+                        12-17 лет
+                    </p>
+                    <button class="btn btn--green">
+                        Выбрать категорию
+                    </button>
+                </div>      
+            </div>
+            <div class="pass_page__categories-item">
+                <picture class="pass_page__categories-img">
+                    <img src="img/start_img-2.jpg" alt="#">
+                </picture>
+                <div class="pass_page__categories-info">
+                    <h6 class="pass_page__categories-name">
+                        Без профильного образования
+                    </h6>
+                    <p class="pass_page__categories-text">
+                        возраст старше 18 лет
+                    </p>
+                    <button class="btn btn--green">
+                        Выбрать категорию
+                    </button>
+                </div>      
+            </div>
+            <div class="pass_page__categories-item">
+                <picture class="pass_page__categories-img">
+                    <img src="img/start_img-3.jpg" alt="#">
+                </picture>
+                <div class="pass_page__categories-info">
+                    <h6 class="pass_page__categories-name">
+                        Эксперт, студент,
+                        специалист, руководитель 
+                        в экологической сфере
+                    </h6>
+                    <p class="pass_page__categories-text">
+    
+                    </p>
+                    <button class="btn btn--green">
+                        Выбрать категорию
+                    </button>
+                </div>      
+            </div>
+            <div class="pass_page__categories-item">
+                <picture class="pass_page__categories-img">
+                    <img src="img/start_img-4.jpg" alt="#">
+                </picture>
+                <div class="pass_page__categories-info">
+                    <h6 class="pass_page__categories-name">
+                        Cотрудник <br>
+                        организации-партнера <br>
+                        Экодиктанта
+                    </h6>
+                    <p class="pass_page__categories-text">
+    
+                    </p>
+                    <button class="btn btn--green">
+                        Выбрать категорию
+                    </button>
+                </div>      
+            </div>
+        </div>
+    </section>
+
+	//= templates/footer.html
+        
+
+</div>
+
+
+<div class="modal" id="edit">
+    <div class="modal_content">
+        <button class="close"></button>
+        <form action="" class="edit_form">
+            <h6 class="edit_form-heading">
+                Категория участника:
+            </h6>
+            <div class="reg_field">
+                <div class="custom-select" id='category-select'>
+                    <select required name="category" >
+                      <option value="0">Выберите из списка:</option>
+                      <option value="1">Без профильного образования (возраст старше 18 лет)</option>
+                      <option value="2">Эксперт, студент, специалист, руководитель в экологической сфере</option>
+                      <option value="3">Cотрудник организации-партнера Экодиктанта</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn btn--green">
+                Сохранить
+            </button>
+            <button class="close_btn">
+                Отмена
+            </button>
+        </form>
+    </div>
+</div>
+<!-- scripts -->
+    <script src='libs/jquery/dist/jquery.min.js'></script>
+    <script src='libs/jquery.maskedinput.js'></script>
+    <script src='libs/slick-carousel/slick/slick.min.js'></script>
+	<script src="js/main.js"></script> <!-- main scripts -->
+<!-- scripts -->
+</body>
+</html>

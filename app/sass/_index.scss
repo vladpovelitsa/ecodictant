@@ -41,6 +41,9 @@
         &--reg {
             font-size: 38px;
         }
+        &--cabinet {
+            font-size: 38px;
+        }
     }
     &__date {
         font-size: 20px;
@@ -188,6 +191,7 @@
             width: 100%;
         }
     }
+    
     .content--404,
     .content--start {
         .btn {
@@ -674,6 +678,11 @@
         } 
         &--start {
             align-items: flex-start;
+        }
+        &--pass {
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding-bottom: 20px;
         }
     }
     .faces {
