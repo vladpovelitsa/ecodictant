@@ -86,12 +86,14 @@
         justify-content: space-between;
         &-radio {
             width: 48%;
+            margin-bottom: 23px;
+
             span {    
                 border-radius: 3px;
-                margin-bottom: 23px;
                 background: #02517A;
                 display: block;
                 min-height: 56px;
+                height: 100%;
                 width: 100%;
                 color: #fff;
                 font-size: 16px;
@@ -203,7 +205,7 @@
             }
         }
         &__question {
-            padding: 15px;
+            padding: 15px 32px;
         }
         &__main {
             &-img {

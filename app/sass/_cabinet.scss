@@ -104,10 +104,14 @@
     &__img {
         display: block;
         margin-bottom: 43px;
+        max-width: 175px;
         img {
             box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16)
         }
     }
+}
+.mobile_break {
+    display: none;
 }
 
 .start_btns_wrap {
@@ -121,6 +125,9 @@
     }
     a.btn {
         margin-bottom: 26px;
+    }
+    &-column {
+        flex-direction: column;
     }
 }
 
@@ -143,6 +150,8 @@
     .start_btns_wrap {
         .btn {
             margin-bottom: 30px;
+            margin-right: 0;
+
         }
     }
 }
@@ -170,6 +179,7 @@
             padding: 0 15px;
         }
         &__table {
+            border-radius: 0;
             &_row {
                 position: relative;
                 flex-direction: column;
@@ -198,6 +208,10 @@
         &__img,
         &__desc {
             padding: 0 15px;
+            max-width: unset;
         }
+    }
+    .mobile_break {
+        display: block;
     }
 }

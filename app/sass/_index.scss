@@ -218,6 +218,9 @@
     .section_heading {
         position: absolute;
         top: 45px;
+        width: 100%;
+        padding-left: 535px;
+        z-index: 75;
     } 
     &__slider {
         .slick {
@@ -686,6 +689,9 @@
         }
     }
     .faces {
+        .section_heading {
+            padding-left: 32px;
+        }
         &__item {
             flex-direction: column-reverse;
             padding-bottom: 0;
@@ -874,10 +880,13 @@
             }
         }
         &__subheading {
-            font-size: 14px;
+            font-size: 16px;
+            br {
+                display: none;
+            }
         }
         &__info_text {
-            font-size: 14px;
+            font-size: 16px;
         }
         .mobile_btns {
             display:block;
@@ -955,6 +964,9 @@
         }
         &__about {
             font-size: 10px;
+        }
+        &__name {
+            font-size: 18px;
         }
     }
     .organizations {

@@ -154,7 +154,7 @@ $('.organizations__slider').slick({
     ]
   })
   $('.partners__container--organizators .partners__wrap').slick({
-    infinite: false,
+    infinite: true,
     mobileFirst: true,
     slidesToShow: 2,
     autoplay: true,
@@ -174,7 +174,7 @@ $('.organizations__slider').slick({
   })
 
   $('.partners__container--official .partners__wrap').slick({
-    infinite: false,
+    infinite: true,
     mobileFirst: true,
     slidesToShow: 2,
     autoplay: true,
