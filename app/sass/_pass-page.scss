@@ -1,4 +1,5 @@
 .pass_page {
+    padding-bottom: 50px;
     p {
         font-size: 16px;
         line-height: 2;
@@ -7,6 +8,18 @@
             font-weight: 700;
             color: #02517A;
         }
+    }
+    &__selected_category {
+        p {
+            font-size: 20px;
+            &.pass_page__selected_category-value {
+                strong {
+                    color:#98C22A !important;
+                }
+                margin-bottom: 30px;
+            }
+        }
+    
     }
     &__categories {
         display: flex;
@@ -46,13 +59,90 @@
             font-size: 18px;
         }
     }
-}
+    &__file {
+        display: flex;
+    }
+    &-footer {
+        padding-top: 42px;
+        padding-bottom: 72px;
+        .instructions {
+            &__file {
+                padding-top: 0;
+                margin-bottom: 38px;
+                &:before {
+                    top: 50%;
+                    transform: translate(0,-50%);
+                }
+            }
+            &__name,
+            &__text {
+                font-size: 16px;
+            }
 
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 43px;
+        }
+    }
+}
+.pass_instructions {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 52px;
+    padding-bottom: 61px;
+    background: #F6F6FD;
+
+    &__item {
+        width: 100%;
+        max-width: 369px;
+        &-big {
+            max-width: 763px;
+        }
+        &-heading {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 57px;
+        }
+        &-img {
+            display: block;
+            img {
+                box-shadow: 0 6px 12px rgba($color: #212529, $alpha: .16);
+            }
+        }
+    }
+}
 @media screen and (max-width: 1200px) {
     .pass_page {
         &__categories {
             &-item {
                 width: 100%;
+            }
+        }
+    }
+    .pass_instructions {
+        padding-left: 0;
+        padding-right: 0;
+        flex-wrap: wrap;
+        &__item {
+            max-width: 100%;
+            margin-bottom: 50px;
+            &-heading {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            
+            &-img {
+                padding: 0 15px;
+            }
+
+            &-big {
+                .pass_instructions__item-img {
+                    padding: 0;
+                }
             }
         }
     }

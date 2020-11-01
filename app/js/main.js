@@ -472,3 +472,15 @@ function mapHightlighter() {
 }
 
 document.addEventListener('click', mapHightlighter)
+
+function videoToggler() {
+  var el = event.target
+  if(el.classList.contains('video__toggler')){
+    el.closest('.test__question').querySelector('.test__video').classList.add('active')
+  }
+  if (el.classList.contains('test__video') || el.classList.contains('test__video')) {
+    el.closest('.test__question').querySelector('.test__video').classList.remove('active')
+  }
+}
+
+document.addEventListener('click', videoToggler)
