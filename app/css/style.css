@@ -1561,7 +1561,8 @@ nav {
     width: 172px;
     height: 172px; }
   .support__logo {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    display: block; }
     .support__logo img {
       margin: auto; }
   .support__name {
