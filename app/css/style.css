@@ -3306,12 +3306,12 @@ nav {
       max-width: 100%;
       margin-bottom: 50px; }
       .pass_instructions__item-heading {
-        padding-right: 15px;
-        padding-left: 15px; }
+        padding-right: 32px;
+        padding-left: 32px; }
       .pass_instructions__item:last-of-type {
         margin-bottom: 0; }
       .pass_instructions__item-img {
-        padding: 0 15px; }
+        padding: 0 32px; }
       .pass_instructions__item-big .pass_instructions__item-img {
         padding: 0; } }
 
