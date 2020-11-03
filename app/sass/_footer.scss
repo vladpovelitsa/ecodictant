@@ -34,6 +34,10 @@
     &__regulation {
         margin-right: 10px;
     }
+    &__docs {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 1250px) {

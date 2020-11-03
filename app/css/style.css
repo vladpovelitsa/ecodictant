@@ -1008,6 +1008,16 @@ nav {
     margin-right: 10px; }
   .footer__regulation {
     margin-right: 10px; }
+  .footer__docs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
 
 @media screen and (max-width: 1250px) {
   .footer {
@@ -1406,6 +1416,8 @@ nav {
   .faces__item {
     padding-left: calc(50vw - 585px);
     position: relative; }
+  .faces .section_heading {
+    padding-left: calc(50vw - 585px); }
   .faces__text {
     margin-left: 0; }
   .faces__img {
@@ -1440,6 +1452,19 @@ nav {
         justify-content: space-between; }
     .partners__container--official .partners__header {
       margin-bottom: 68px; }
+  .partners__container--info {
+    width: 100%; }
+    .partners__container--info .partners__wrap {
+      width: 100%;
+      margin-bottom: 80px; }
+      .partners__container--info .partners__wrap .partners__logo {
+        margin-right: 0;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+    .partners__container--info .partners__header {
+      margin-bottom: 50px; }
   .partners__header {
     font-size: 20px;
     color: #02517A;
@@ -1648,8 +1673,10 @@ nav {
     background: #fff;
     width: 172px;
     height: 100px;
-    margin-right: 25px;
+    margin-right: 20px;
     border-radius: 6px; }
+    .organizations__logo a {
+      padding: 10px; }
 
 .reg_info {
   padding-top: 50px;
@@ -1966,6 +1993,8 @@ nav {
     top: -60px; }
   .partners__container--official .slick-slider .slick-arrow {
     top: -95px; }
+  .partners__container--info .partners__header {
+    font-size: 18px; }
   .partners__logo a {
     display: block;
     min-width: 40px; }
@@ -2767,6 +2796,9 @@ nav {
       .lessons__slider .slick-arrow.slick-prev {
         right: 45px;
         left: unset; }
+    .lessons__slider .slick-track {
+      margin-left: 0;
+      margin-right: 0; }
 
 @media screen and (max-width: 767px) {
   .lessons .section_heading {

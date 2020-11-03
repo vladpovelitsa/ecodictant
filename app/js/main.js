@@ -193,6 +193,26 @@ $('.organizations__slider').slick({
       }
     ]
   })
+  $('.partners__container--info .partners__wrap').slick({
+    infinite: true,
+    mobileFirst: true,
+    slidesToShow: 2,
+    autoplay: true,
+    autoplaySpeed: 4000,
+
+    responsive: [ {
+      breakpoint: 1250,
+      settings: 'unslick',
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: true,
+  
+        }
+      }
+    ]
+  })
 
 function countDown(startYear, startMouth, startDay){
   const startDate = new Date(startYear, startMouth, startDay);
