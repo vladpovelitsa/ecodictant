@@ -166,8 +166,8 @@ $('.organizations__slider').slick({
       {
         breakpoint: 768,
         settings: {
-          variableWidth: true,
-  
+          variableWidth: false,
+          
         }
       }
     ]
@@ -185,9 +185,10 @@ $('.organizations__slider').slick({
       settings: 'unslick',
       },
       {
-        breakpoint: 768,
+        breakpoint: 767,
         settings: {
-          variableWidth: true,
+          // variableWidth: true,
+          slidesToShow: 4,
   
         }
       }
@@ -205,15 +206,35 @@ $('.organizations__slider').slick({
       settings: 'unslick',
       },
       {
-        breakpoint: 768,
+        breakpoint: 767,
         settings: {
-          variableWidth: true,
+          // variableWidth: true,
+          slidesToShow: 4,
   
         }
       }
     ]
   })
-
+  $('.partners__container--general .partners__wrap').slick({
+    infinite: true,
+    mobileFirst: true,
+    slidesToShow: 2,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [ {
+      breakpoint: 1250,
+      settings: 'unslick',
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          variableWidth: false,
+        slidesToShow: 1,
+          
+        }
+      }
+    ]
+  })
 function countDown(startYear, startMouth, startDay){
   const startDate = new Date(startYear, startMouth, startDay);
   

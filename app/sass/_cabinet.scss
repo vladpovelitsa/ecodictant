@@ -161,7 +161,7 @@
     .cabinet {
         padding: 0 0 50px;
         &__header {
-            padding: 0 15px;
+            padding: 0 32px;
             flex-wrap: wrap;
             &-name {
                 order: 99;
@@ -185,6 +185,7 @@
                 position: relative;
                 flex-direction: column;
                 align-items: flex-start;
+                padding: 17px 32px;
                 .btn {
                     position: absolute;
                     top: 50%;
@@ -214,5 +215,14 @@
     }
     .mobile_break {
         display: block;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cabinet__table_row {
+        padding: 17px 10px;
+    }
+    .cabinet__header {
+        padding: 0 10px;
     }
 }

@@ -27,6 +27,7 @@
 		font-size: 16px;
 		background: url('../img/start.jpg') top right no-repeat;
 		// background-size: contain;
+		overflow-x: hidden;
 
 	}
 	button {
@@ -54,8 +55,8 @@
 	    -moz-appearance: textfield;
 	}
 	.center {
-		padding-left: calc(50vw - 585px);
-		padding-right: calc(50vw - 580px);
+		padding-left: calc(50vw - 730px);
+		padding-right: calc(50vw - 730px);
 	}
 	.visually_hidden {
 		position: absolute;
@@ -275,10 +276,19 @@
 	height: 52px;
 }
 
+@media screen and (max-width: 1500px) {
+	.center {
+		padding-left: calc(50vw - 585px);
+		padding-right: calc(50vw - 580px);
+	}
+}
+
 @media screen and (max-width: 1250px) {
 	.center {
-		padding-left: calc(50vw - 360px);
-		padding-right: calc(50vw - 360px);
+		// padding-left: calc(50vw - 360px);
+		// padding-right: calc(50vw - 360px);
+		padding-left: 50px;
+		padding-right: 50px;
 	}
 	body {
 		background-position: top  center;

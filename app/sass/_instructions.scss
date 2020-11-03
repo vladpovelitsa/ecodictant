@@ -135,7 +135,18 @@
         &__item-steps .instructions__heading,
         &__item-docs,
         &__item-files {
-            padding: 0 15px;
+            padding: 0 32px;
         }
     }
 }   
+
+@media screen and (max-width: 767px) {
+    .instructions {
+        &__steps,
+        &__item-steps .instructions__heading,
+        &__item-docs,
+        &__item-files {
+            padding: 0 10px;
+        }
+    }
+}
