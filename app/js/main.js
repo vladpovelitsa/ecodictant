@@ -390,7 +390,7 @@ function setupVideo(video) {
   let button = video.querySelector('.video__button');
   let id = parseMediaURL(media);
 
-  video.addEventListener('click', () => {
+  video.addEventListener('click', function() {
     let iframe = createIframe(id);
 
     link.remove();
