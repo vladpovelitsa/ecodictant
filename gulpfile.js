@@ -48,6 +48,7 @@ gulp.task('scripts', function(done){
         'app/libs/jquery/dist/jquery.min.js', 
         'app/libs/slick-carousel/slick/slick.min.js', 
         'app/libs/jquery.maskedinput.js',
+        'app/libs/lightbox/dist/js/lightbox.min.js',
         ])
     .pipe(concat('libs.js'))
     .pipe(gulp.dest('app/js/'))
@@ -58,6 +59,7 @@ gulp.task('styles', function(done){
 
     gulp.src([
         'app/libs/slick-carousel/slick/slick.scss',
+        'app/libs/lightbox/dist/css/lightbox.min.css',
         ])
     .pipe(concat('libs.min.css'))
     .pipe(sass({

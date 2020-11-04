@@ -3,27 +3,25 @@ var offset = innerHeight * 0.9;
 var trigger = document.querySelector("#trigger") || 0;
 var header = document.querySelector('.header') || 0;
 var body = document.querySelector('body') || 0;
-// function setAnimation() {
-//   sections.forEach(function(item) {
-//     if (item.getBoundingClientRect().top < offset) {
-//       item.classList.add('animated')
-//       var timeout = setTimeout(function(){
-//         item.classList.add('animation_ends')
-//       },7000)
-//     }
-//   })
+function setAnimation() {
+  // sections.forEach(function(item) {
+  //   if (item.getBoundingClientRect().top < offset) {
+  //     item.classList.add('animated')
+  //     var timeout = setTimeout(function(){
+  //       item.classList.add('animation_ends')
+  //     },7000)
+  //   }
+  // })
+  if (trigger.getBoundingClientRect().top < 0 && document.querySelector('.header')) {
+    header.classList.add('header--scrolled')
+  }
+  else if(document.querySelector('.header')) {
+    header.classList.remove('header--scrolled')
+  }
+}
 
-//   if (trigger.getBoundingClientRect().top < 0 && document.querySelector('.header')) {
-//     header.classList.add('header--scrolled')
-//   }
-//   else if(document.querySelector('.header')) {
-//     header.classList.remove('header--scrolled')
-//   }
-// }
-
-// document.addEventListener('scroll', setAnimation)
-// setAnimation()
-
+document.addEventListener('scroll', setAnimation)
+setAnimation()
 function modalControls(e){
   var body = document.querySelector('body');
   if (e.target.classList.contains('modal_btn')) {
@@ -38,16 +36,17 @@ function modalControls(e){
     body.classList.remove('overlay');
   }
 }
-
 document.addEventListener('click', modalControls)
-
 function navControls() {
     var elem = event.target
     var nav = document.querySelector('nav')
     if (elem.classList.contains('show_menu')) {
+        header.classList.add('header--scrolled');
+        if (nav.classList.contains('active') && trigger.getBoundingClientRect().top >= 0) {
+          header.classList.remove('header--scrolled');
+        } 
         elem.classList.toggle('active')
         nav.classList.toggle('active')
-        header.classList.add('header--scrolled');
         body.classList.toggle('overlay')
     }
 
@@ -74,8 +73,6 @@ function navControls() {
     }
 }
 document.addEventListener('click', navControls)
-
-
 function tabs(e){
   e = event.target
   var currentTabs = e.parentNode.parentNode
@@ -90,13 +87,10 @@ function tabs(e){
     currentTabs.querySelector(e.getAttribute('data-target')).classList.add('active')
   }
 }
-
 document.addEventListener('click', tabs);
-
 $(function($){
   $('[type="tel"]').mask("+7 (999) 999-99-99");
 })
-
 $('.faces__slider').slick({
   dots:true,
   adaptiveHeight: true,
@@ -153,69 +147,68 @@ $('.organizations__slider').slick({
       }
     ]
   })
-  $('.partners__container--organizators .partners__wrap').slick({
-    infinite: true,
-    mobileFirst: true,
-    slidesToShow: 2,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    responsive: [ {
-      breakpoint: 1250,
-      settings: 'unslick',
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          variableWidth: false,
-          
-        }
+$('.partners__container--organizators .partners__wrap').slick({
+  infinite: true,
+  mobileFirst: true,
+  slidesToShow: 2,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  responsive: [ {
+    breakpoint: 1250,
+    settings: 'unslick',
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        variableWidth: false,
+        
       }
-    ]
-  })
+    }
+  ]
+})
+$('.partners__container--official .partners__wrap').slick({
+  infinite: true,
+  mobileFirst: true,
+  slidesToShow: 2,
+  autoplay: true,
+  autoplaySpeed: 4000,
 
-  $('.partners__container--official .partners__wrap').slick({
-    infinite: true,
-    mobileFirst: true,
-    slidesToShow: 2,
-    autoplay: true,
-    autoplaySpeed: 4000,
+  responsive: [ {
+    breakpoint: 1250,
+    settings: 'unslick',
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        // variableWidth: true,
+        slidesToShow: 4,
 
-    responsive: [ {
-      breakpoint: 1250,
-      settings: 'unslick',
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          // variableWidth: true,
-          slidesToShow: 4,
-  
-        }
       }
-    ]
-  })
-  $('.partners__container--info .partners__wrap').slick({
-    infinite: true,
-    mobileFirst: true,
-    slidesToShow: 2,
-    autoplay: true,
-    autoplaySpeed: 4000,
+    }
+  ]
+})
+$('.partners__container--info .partners__wrap').slick({
+  infinite: true,
+  mobileFirst: true,
+  slidesToShow: 2,
+  autoplay: true,
+  autoplaySpeed: 4000,
 
-    responsive: [ {
-      breakpoint: 1250,
-      settings: 'unslick',
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          // variableWidth: true,
-          slidesToShow: 4,
-  
-        }
+  responsive: [ {
+    breakpoint: 1250,
+    settings: 'unslick',
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        // variableWidth: true,
+        slidesToShow: 4,
+
       }
-    ]
-  })
-  $('.partners__container--general .partners__wrap').slick({
+    }
+  ]
+})
+$('.partners__container--general .partners__wrap').slick({
     infinite: true,
     mobileFirst: true,
     slidesToShow: 2,
@@ -258,12 +251,9 @@ function countDown(startYear, startMouth, startDay){
   },1000)
 
 }
-
-// start 15 nov 2020
 if(document.querySelector('.offer__countdown_container')){
   countDown(2020, 10, 15);
 }
-
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select");
@@ -324,7 +314,6 @@ for (i = 0; i < l; i++) {
     this.classList.toggle("select-arrow-active");
   });
 }
-
 function closeAllSelect(elmnt) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
@@ -346,7 +335,6 @@ function closeAllSelect(elmnt) {
     }
   }
 }
-
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
@@ -361,7 +349,6 @@ function showHiddenSelect(target) {
   }
 
 }
-
 $('.media__slider').slick({
   dots:false,
   slidesToShow: 3,
@@ -382,7 +369,6 @@ $('.media__slider').slick({
     },
   ]
 })
-
 function placesInfoToggler() {
   var e = event.target;
   if(e.classList.contains('places__info-toggler')) {
@@ -390,12 +376,7 @@ function placesInfoToggler() {
     e.nextElementSibling.classList.toggle('active')
   }
 }
-
 document.addEventListener('click', placesInfoToggler)
-
-
-
-
 var clipPlay = false
 function findVideos() {
   let videos = document.querySelectorAll('.clip_cover');
@@ -404,7 +385,6 @@ function findVideos() {
     setupVideo(videos[i]);
   }
 }
-
 function setupVideo(video) {
   let link = video.querySelector('.video__link');
   let media = video.querySelector('.video__media');
@@ -422,7 +402,6 @@ function setupVideo(video) {
   link.removeAttribute('href');
   video.classList.add('video--enabled');
 }
-
 function parseMediaURL(media) {
   let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
   let url = media.src;
@@ -430,7 +409,6 @@ function parseMediaURL(media) {
 
   return match[1];
 }
-
 function createIframe(id) {
   let iframe = document.createElement('iframe');
 
@@ -441,16 +419,12 @@ function createIframe(id) {
 
   return iframe;
 }
-
 function generateURL(id) {
   let query = '?rel=0&showinfo=0&autoplay=1';
 
   return 'https://www.youtube.com/embed/' + id + query;
 }
-
 findVideos();
-
-
 $('.lessons__slider').slick({
   dots:false,
   slidesToShow: 3,
@@ -469,7 +443,6 @@ $('.lessons__slider').slick({
     },
   ]
 })
-
 function filtersDropdown() {
   var el = event.target;
 
@@ -491,10 +464,7 @@ function filtersDropdown() {
     })
   }
 }
-
 document.addEventListener('click', filtersDropdown)
-
-
 function mapHightlighter() {
   var el = event.target;
 
@@ -506,9 +476,7 @@ function mapHightlighter() {
   }
   
 }
-
 document.addEventListener('click', mapHightlighter)
-
 function videoToggler() {
   var el = event.target
   if(el.classList.contains('video__toggler')){
@@ -518,5 +486,4 @@ function videoToggler() {
     el.closest('.test__question').querySelector('.test__video').classList.remove('active')
   }
 }
-
 document.addEventListener('click', videoToggler)

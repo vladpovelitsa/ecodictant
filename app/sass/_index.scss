@@ -731,9 +731,7 @@
         background-position:55% 50%;
         padding-top: 408px;
         flex-direction: column;
-        &__heading {
-            font-size: 29px;
-        }
+        
         
         &--start {
             background-position: 50% -175px;
@@ -982,6 +980,9 @@
                     margin-bottom: 0;
                 }
             }
+        }
+        &__heading {
+            font-size: 29px;
         }
     }
     .faces {

@@ -858,7 +858,8 @@ nav {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    list-style: none; }
+    list-style: none;
+    margin: 0 auto; }
     nav .nav a {
       color: #02517A;
       font-size: 17px;
@@ -881,7 +882,6 @@ nav {
     background: #fff;
     border-radius: 50%; }
   nav .btn {
-    margin-left: 25px;
     width: 100%;
     max-width: 220px;
     height: 44px; }
@@ -1822,8 +1822,6 @@ nav {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .offer__heading {
-      font-size: 29px; }
     .offer--start {
       background-position: 50% -175px;
       background-size: auto;
@@ -2014,6 +2012,8 @@ nav {
         font-size: 18px; }
         .offer .mobile_btns .btn:last-child {
           margin-bottom: 0; }
+    .offer__heading {
+      font-size: 29px; }
   .faces__text {
     padding-top: 100px;
     max-width: 350px;
