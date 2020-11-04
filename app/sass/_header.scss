@@ -61,7 +61,6 @@ nav {
     .nav {
         display: flex;
         list-style: none;
-        margin: 0 auto;
         a {
             color: #02517A;
             font-size: 17px;
@@ -92,7 +91,7 @@ nav {
         border-radius: 50%;
     }
     .btn {
-        // margin-left: 25px;
+        margin-left: 25px;
         width: 100%;
         max-width: 220px;
         height: 44px;
@@ -101,6 +100,10 @@ nav {
 }
 .show_menu {
     display: none;
+}
+
+@media screen and (min-width:1500px) {
+    
 }
 @media screen and (max-width:1250px) {
     .show_menu {

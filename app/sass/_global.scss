@@ -94,7 +94,7 @@
 		}
 	}
 	.section_heading {
-		font-size: 38px;
+		font-size: 48px;
 	}
 	.wrapper {
 		display: flex;
@@ -277,9 +277,15 @@
 }
 
 @media screen and (max-width: 1500px) {
+	body {
+		background-size: 1200px;
+	}
 	.center {
 		padding-left: calc(50vw - 585px);
 		padding-right: calc(50vw - 580px);
+	}
+	.section_heading {
+		font-size: 38px;
 	}
 }
 
