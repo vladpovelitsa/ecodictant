@@ -97,7 +97,7 @@
 
     &__item {
         width: 100%;
-        max-width: 369px;
+        max-width: 48%;
         &-big {
             max-width: 763px;
         }
@@ -109,7 +109,9 @@
         &-img {
             display: block;
             img {
+                max-height: 254px;
                 box-shadow: 0 6px 12px rgba($color: #212529, $alpha: .16);
+                border-radius: 6px;
             }
         }
     }
@@ -142,6 +144,9 @@
             
             &-img {
                 padding: 0 32px;
+                img {
+                    max-height: unset;
+                }
             }
 
             &-big {

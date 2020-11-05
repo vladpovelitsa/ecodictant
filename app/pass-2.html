@@ -7,7 +7,9 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
 	
-	<link rel="stylesheet" href="libs/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="libs/slick-carousel/slick/slick.css">
+	<link rel="stylesheet" href="libs/lightbox/dist/css/lightbox.min.css">
+    
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
@@ -43,13 +45,15 @@
     </section>
 
     <section class="pass_instructions center">
-        <div class="pass_instructions__item pass_instructions__item-big">
+        <div class="pass_instructions__item">
             <h6 class="pass_instructions__item-heading">
                 Схема прохождения <br>
                 онлайн Экодиктанта:
             </h6>
             <picture class="pass_instructions__item-img">
-                <img src="img/inctructions__img-placeholder2.jpg" alt="#">
+				<a href="img/instructionns_online.jpg" data-lightbox="instructions__img-2">
+                    <img src="img/instructionns_online.jpg" alt="#">
+                </a>
             </picture>
         </div>
         <div class="pass_instructions__item">
@@ -58,7 +62,7 @@
                 онлайн Экодиктанта:
             </h6>
             <picture class="pass_instructions__item-img">
-                <img src="img/example_img.jpg" alt="#">
+                <img src="img/pass_instruction-online.jpg" alt="#">
             </picture>
         </div>
     </section>
@@ -123,6 +127,8 @@
     <script src='libs/jquery/dist/jquery.min.js'></script>
     <script src='libs/jquery.maskedinput.js'></script>
     <script src='libs/slick-carousel/slick/slick.min.js'></script>
+    <script src='libs/lightbox/dist/js/lightbox.min.js'></script>
+
 	<script src="js/main.js"></script> <!-- main scripts -->
 <!-- scripts -->
 </body>

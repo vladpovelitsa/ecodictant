@@ -92,6 +92,12 @@
 			background: #98C22A;
 			color: #fff;
 		}
+		&--transparent {
+			background: transparent;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 	.section_heading {
 		font-size: 48px;
