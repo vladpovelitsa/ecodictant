@@ -1110,7 +1110,11 @@
         &--general {
             max-width: 100%;
             .partners__logo {
+                width: 100%;
                 max-width: 45%;
+                img {
+                    min-width: 150px;
+                }
             }
         } 
             
