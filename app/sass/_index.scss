@@ -152,7 +152,7 @@
     }
     &--fullpage {
         align-items: flex-start;
-        min-height:calc(100vh - 77px);
+        min-height:calc(100vh - 101px);
     }
     &__text {
         font-size: 16px;
@@ -161,7 +161,7 @@
     }
     &--start {
         align-items: flex-start;
-        min-height:calc(100vh - 77px);
+        min-height:calc(100vh - 101px);
         .offer__countdown {
             padding-top: 150px;
         }
@@ -827,6 +827,7 @@
             padding-bottom: 0;
             margin-bottom: auto;
             // margin-bottom: -100px;
+            min-height: 470px;
         }
         &__img {
             // margin-top: auto;
