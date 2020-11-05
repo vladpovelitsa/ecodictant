@@ -189,6 +189,16 @@
                 <li><a href="offline-plug.html">
                     Оффлайн площадки - заглушка
                 </a></li>
+                <li><button class="btn btn--green modal_btn" data-target="alredy-sent">
+                    На указанный email уже направлено письмо для активации
+                </button></li>
+                <li><button class="btn btn--green modal_btn" data-target="alredy-exist">
+                    Пользователь с таким email уже зарегистрирован
+                </button></li>
+                <li><button class="btn btn--green modal_btn" data-target="waiting">
+                    Для завершения регистрации на Ваш email будет
+                    направлено письмо с подтверждением
+                </button></li>
             </ol> 
         </div>
 	</div>
@@ -312,7 +322,64 @@
     </footer>
     <!-- footer -->
         
-
+    <dialog class="modal " id="alredy-sent">
+        <div class="modal_content">
+            <button class="close"></button>
+            <h2 class="modal_heading">
+                На указанный email уже направлено письмо для активации
+            </h2>
+            <p class="modal_text">
+                Проверьте свой почтовый ящик: <br>
+                письмо могло попасть в спам
+            </p>
+            <div class="modal_btns">
+                <button class="btn btn--green">
+                    Отправить письмо повторно
+                </button>
+            </div>
+            
+        </div>
+    </dialog>
+    <dialog class="modal " id="alredy-exist">
+        <div class="modal_content">
+            <button class="close"></button>
+            <h2 class="modal_heading">
+                Пользователь с таким email уже зарегистрирован
+            </h2>
+            <p class="modal_text">
+                Проверьте правильность <br>
+                введенных данных
+            </p>
+            <div class="modal_btns">
+                <a href="reg.html" class="btn btn--green">
+                    Зарегистрироваться
+                </a>
+                <a href="restore.html" class="btn btn--blue">
+                    Восстановить пароль
+                </a>
+            </div>
+            
+        </div>
+    </dialog>
+    <dialog class="modal " id="waiting">
+        <div class="modal_content">
+            <button class="close"></button>
+            <h2 class="modal_heading">
+                Для завершения регистрации на Ваш email будет <br>
+                направлено письмо с подтверждением
+            </h2>
+            <p class="modal_text">
+                В связи с большим количеством обращений <br>
+                отправка письма займет какое-то время
+            </p>
+            <div class="modal_btns">
+                <a href="index.html" class="btn btn--green">
+                    На главную страницу
+                </a>
+            </div>
+            
+        </div>
+    </dialog>
 </div>
 <!-- scripts -->
 <script src='libs/jquery/dist/jquery.min.js'></script>
