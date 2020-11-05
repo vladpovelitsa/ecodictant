@@ -30,7 +30,10 @@ function modalControls(e){
     modal.classList.add('active');
     body.classList.add('overlay');
   }
-  if (e.target.classList.contains('overlay') || e.target.classList.contains('close') || e.target.classList.contains('close_btn')) {
+  if (e.target.classList.contains('overlay') 
+      || e.target.classList.contains('close') 
+      || e.target.classList.contains('close_btn')
+      || e.target.classList.contains('close_modal')) {
     var modal = document.querySelector('.modal.active');
     modal.classList.remove('active');
     body.classList.remove('overlay');
