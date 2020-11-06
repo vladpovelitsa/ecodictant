@@ -203,11 +203,16 @@
     &__btns {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         margin-bottom: 50px;
+        width: 100%;
         .btn {
             height: 52px;
-            max-width: 370px;
-            width: 100%;
+            // max-width: 370px;
+            width: 48%;
+            &--transparent {
+                font-weight: 400;
+            }
         }
     }
 }
@@ -339,6 +344,7 @@
             flex-direction: column;
             .btn {
                 margin-bottom: 15px;
+                width: 100%;
             }
         }
     }
