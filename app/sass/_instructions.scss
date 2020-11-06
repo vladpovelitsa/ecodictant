@@ -129,7 +129,10 @@
         &__item-steps .instructions__heading,
         &__item-docs,
         &__item-files {
-            padding: 0 50px;
+            // padding-left: calc(50vw - 360px);
+            // padding-right: calc(50vw - 360px);
+            padding-left: 50px;
+            padding-right: 50px;
         }
         &__img {
             max-width: 100%;
@@ -152,21 +155,22 @@
         &__item-steps .instructions__heading,
         &__item-docs,
         &__item-files {
-            padding: 0 32px;
+            padding-left: calc(50vw - 250px);
+	    	padding-right: calc(50vw - 250px);
         }
     }
 }   
 
-@media screen and (max-width: 767px) {
-    .instructions {
-        &__steps,
-        &__item-steps .instructions__heading,
-        &__item-docs,
-        &__item-files {
-            padding: 0 10px;
-        }
-    }
-}
+// @media screen and (max-width: 767px) {
+//     .instructions {
+//         &__steps,
+//         &__item-steps .instructions__heading,
+//         &__item-docs,
+//         &__item-files {
+//             padding: 0 10px;
+//         }
+//     }
+// }
 
 .lightbox {
     top: 50% !important;
@@ -192,8 +196,19 @@
 		background: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.7269 21.4087L12.8186 11.5004L22.7268 1.59223C23.0909 1.22813 23.0909 0.637727 22.7268 0.273591C22.3627 -0.0905458 21.7723 -0.0905458 21.4082 0.273591L11.5 10.1818L1.59174 0.273591C1.22765 -0.0905458 0.637238 -0.0905458 0.273102 0.273591C-0.091034 0.637682 -0.091034 1.22809 0.273102 1.59223L10.1813 11.5004L0.273102 21.4087C-0.091034 21.7728 -0.091034 22.3632 0.273102 22.7273C0.637193 23.0914 1.2276 23.0915 1.59174 22.7273L11.5 12.819L21.4083 22.7273C21.7724 23.0914 22.3628 23.0915 22.7269 22.7273C23.091 22.3632 23.091 21.7728 22.7269 21.4087Z' fill='%2395A0B4'/%3E%3C/svg%3E%0A") center no-repeat;
     
 }
-
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 515px) {
+    .instructions {
+        
+        &__steps,
+        &__item-steps .instructions__heading,
+        &__item-docs,
+        &__item-files {
+            padding-left: calc(50vw - 175px);
+	    	padding-right: calc(50vw - 175px);
+        }
+    }
+}
+@media screen and (max-width: 500px) {
     .instructions {
         &__item {
             &-docs {
@@ -207,4 +222,24 @@
         }
     }
         
+}
+
+@media screen and (max-width: 400px) {
+    &__steps,
+    &__item-steps .instructions__heading,
+    &__item-docs,
+    &__item-files {
+		padding-left: calc(50vw - 170px);
+		padding-right: calc(50vw - 170px);
+	}
+}
+
+@media screen and (max-width: 355px) {
+    &__steps,
+    &__item-steps .instructions__heading,
+    &__item-docs,
+    &__item-files {
+		padding-left: calc(50vw - 150px);
+		padding-right: calc(50vw - 150px);
+	}
 }
