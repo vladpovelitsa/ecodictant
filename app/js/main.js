@@ -471,18 +471,7 @@ function filtersDropdown() {
   }
 }
 document.addEventListener('click', filtersDropdown)
-function mapHightlighter() {
-  var el = event.target;
 
-  if (el.classList.contains('st1')){
-    document.querySelectorAll('st1').forEach(function(item){
-      item.classList.remove('active')
-    })
-    el.classList.add('active')
-  }
-  
-}
-document.addEventListener('click', mapHightlighter)
 function videoToggler() {
   var el = event.target
   if(el.classList.contains('video__toggler')){
@@ -506,3 +495,16 @@ function resetChoise(){
 }
 
 document.addEventListener('click', resetChoise)
+
+function mapHightlighter() {
+  var el = event.target;
+
+  if (el.classList.contains('st1')){
+    document.querySelectorAll('.st1').forEach(function(item){
+      item.classList.remove('active')
+    })
+    el.classList.add('active')
+  }
+  
+}
+document.addEventListener('click', mapHightlighter)
