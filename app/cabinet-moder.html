@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>
+		Всероссийский экологический диктант
+	</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+	
+	<link rel="stylesheet" href="libs/slick-carousel/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+<div class="wrapper">
+	
+    //= templates/header.html
+    
+    <div class="center offer " >
+        <div class="content ">
+            <h1 class="offer__heading offer__heading--cabinet">
+                Личный кабинет модератора
+            </h1>
+            
+        </div>
+    </div>
+	<div id="trigger"></div>
+
+    <section class="cabinet center">
+        <header class="cabinet__header">
+            <h3 class="cabinet__header-name">
+                Мой профиль: 
+            </h3>
+            <a href="restore.html" class="cabinet__header-restore_link">
+                Изменить пароль
+            </a>
+            <button class="btn btn-logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15.844" height="13.368" viewBox="0 0 15.844 13.368" fill="#7f8fa4">
+                    <g id="XMLID_12_" transform="translate(0 -25)">
+                      <path id="XMLID_13_" d="M8.387,4.674a.743.743,0,1,0,1.05,1.05L11.665,3.5q.026-.026.049-.055l.019-.026c.008-.011.017-.022.024-.033s.013-.021.019-.032l.018-.031c.006-.011.011-.022.016-.033s.011-.022.015-.033.008-.022.012-.033.009-.024.013-.036.006-.022.009-.033.007-.025.009-.037,0-.026.006-.039,0-.022,0-.033,0-.048,0-.072h0q0-.036,0-.072c0-.011,0-.022,0-.033s0-.026-.006-.039-.006-.025-.009-.037-.005-.023-.009-.034-.008-.023-.012-.035-.008-.022-.012-.033-.01-.021-.015-.032-.01-.023-.016-.034l-.018-.03c-.007-.011-.013-.022-.02-.033l-.023-.031-.02-.027q-.022-.027-.047-.052l0,0L9.437.218a.743.743,0,1,0-1.05,1.05l.96.96H.743a.743.743,0,0,0,0,1.485h8.6Z" transform="translate(11.882 34.655) rotate(180)"/>
+                      <path id="XMLID_14_" d="M110.15,25h-9.407a.743.743,0,0,0-.743.743v2.971a.743.743,0,1,0,1.485,0V26.485h7.922v10.4h-7.922V34.655a.743.743,0,1,0-1.485,0v2.971a.743.743,0,0,0,.743.743h9.407a.743.743,0,0,0,.743-.743V25.743A.743.743,0,0,0,110.15,25Z" transform="translate(-95.049)" />
+                    </g>
+                </svg>
+                Выйти
+            </button>
+        </header>
+
+        <div class="cabinet__table">
+            <div class="cabinet__table_row">
+                <div class="cabinet__table_cell cabinet__table_cell-label">
+                    Фамилия:
+                </div>
+                <div class="cabinet__table_cell cabinet__table_cell-value">
+                    Гордеев
+                </div>
+                <button class="btn btn--blue modal_btn" data-target='edit'>
+                    Редактировать 
+                </button>
+            </div>
+            <div class="cabinet__table_row">
+                <div class="cabinet__table_cell cabinet__table_cell-label">
+                    Имя: 
+
+                </div>
+                <div class="cabinet__table_cell cabinet__table_cell-value">
+                    Макар 
+                </div>
+                <button class="btn btn--blue modal_btn" data-target='edit'>
+                    Редактировать 
+                </button>
+            </div>
+            <div class="cabinet__table_row">
+                <div class="cabinet__table_cell cabinet__table_cell-label">
+                    Отчество:
+                </div>
+                <div class="cabinet__table_cell cabinet__table_cell-value">
+                    Алексеевич
+                </div>
+                <button class="btn btn--blue modal_btn" data-target='edit'>
+                    Редактировать 
+                </button>
+            </div>
+            <div class="cabinet__table_row">
+                <div class="cabinet__table_cell cabinet__table_cell-label">
+                    Организация:
+                </div>
+                <div class="cabinet__table_cell cabinet__table_cell-value">
+                    МБОУ СОШ «Калининская школа № 1231»
+                </div>
+                <button class="btn btn--blue modal_btn" data-target='edit'>
+                    Редактировать 
+                </button>
+            </div>
+            <div class="cabinet__table_row">
+                <div class="cabinet__table_cell cabinet__table_cell-label">
+                    Контактный телефон:
+                </div>
+                <div class="cabinet__table_cell cabinet__table_cell-value">
+                    +7 (495) 000-00-00
+                </div>
+                <button class="btn btn--blue modal_btn" data-target='edit'>
+                    Редактировать 
+                </button>
+            </div>
+        </div>
+
+        <header class="cabinet__header">
+            <h3 class="cabinet__header-name">
+                Направленные отчеты оффлайн площадки о результатах прохождения Экодиктанта:
+            </h3>
+        </header>
+        <p class="cabinet__desc">
+            Отправить результаты прохождения Экодиктанта участниками оффлайн площадки.
+        </p>
+        <div class="start_btns_wrap">
+            <button class="btn btn--green">
+                Отправить результаты участников
+            </button>
+        </div>
+
+        <div class="cabinet__table cabinet__table--results">
+            <div class="cabinet__table_row">
+                <div class="cabinet__table_cell cabinet__table_cell-name">
+                    Отчет № 7701-00000001 о результатах участника
+                </div>
+                <div class="cabinet__table_cell cabinet__table_cell-status cabinet__table_cell-status--success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path id="_3388538" data-name="3388538" d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm6.082,9.457-6.5,6.5a1,1,0,0,1-1.414,0l-3.25-3.25a1,1,0,0,1,1.414-1.414l2.543,2.543,5.793-5.793a1,1,0,0,1,1.414,1.414Z" fill="#98c22a"/>
+                    </svg>
+                    Отправлен
+                </div>
+                <a href="#" download="" class="cabinet__table_cell cabinet__table_cell-link">
+                    Скачать диплом
+                </a>
+            </div>
+            <div class="cabinet__table_row">
+                <div class="cabinet__table_cell cabinet__table_cell-name">
+                    Отчет № 7701-00000001 о результатах участника
+                </div>
+                <div class="cabinet__table_cell cabinet__table_cell-status cabinet__table_cell-status--success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path id="_3388538" data-name="3388538" d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm6.082,9.457-6.5,6.5a1,1,0,0,1-1.414,0l-3.25-3.25a1,1,0,0,1,1.414-1.414l2.543,2.543,5.793-5.793a1,1,0,0,1,1.414,1.414Z" fill="#98c22a"/>
+                    </svg>
+                    Отправлен
+                </div>
+                <a href="#" download="" class="cabinet__table_cell cabinet__table_cell-link">
+                    Скачать диплом
+                </a>
+            </div>
+            <div class="cabinet__table_row">
+                <div class="cabinet__table_cell cabinet__table_cell-name">
+                    Отчет № 7701-00000001 о результатах участника
+                </div>
+                <div class="cabinet__table_cell cabinet__table_cell-status cabinet__table_cell-status--success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path id="_3388538" data-name="3388538" d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm6.082,9.457-6.5,6.5a1,1,0,0,1-1.414,0l-3.25-3.25a1,1,0,0,1,1.414-1.414l2.543,2.543,5.793-5.793a1,1,0,0,1,1.414,1.414Z" fill="#98c22a"/>
+                    </svg>
+                    Отправлен
+                </div>
+                <a href="#" download="" class="cabinet__table_cell cabinet__table_cell-link">
+                    Скачать диплом
+                </a>
+            </div>
+            <div class="cabinet__table_row">
+                <div class="cabinet__table_cell cabinet__table_cell-name">
+                    Отчет № 7701-00000001 о результатах участника
+                </div>
+                <div class="cabinet__table_cell cabinet__table_cell-status cabinet__table_cell-status--success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path id="_3388538" data-name="3388538" d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm6.082,9.457-6.5,6.5a1,1,0,0,1-1.414,0l-3.25-3.25a1,1,0,0,1,1.414-1.414l2.543,2.543,5.793-5.793a1,1,0,0,1,1.414,1.414Z" fill="#98c22a"/>
+                    </svg>
+                    Отправлен
+                </div>
+                <a href="#" download="" class="cabinet__table_cell cabinet__table_cell-link">
+                    Скачать диплом
+                </a>
+            </div>
+            <div class="cabinet__table_row">
+                <div class="cabinet__table_cell cabinet__table_cell-name">
+                    Отчет № 7701-00000001 о результатах участника
+                </div>
+                <div class="cabinet__table_cell cabinet__table_cell-status cabinet__table_cell-status--success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path id="_3388538" data-name="3388538" d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm6.082,9.457-6.5,6.5a1,1,0,0,1-1.414,0l-3.25-3.25a1,1,0,0,1,1.414-1.414l2.543,2.543,5.793-5.793a1,1,0,0,1,1.414,1.414Z" fill="#98c22a"/>
+                    </svg>
+                    Отправлен
+                </div>
+                <a href="#" download="" class="cabinet__table_cell cabinet__table_cell-link">
+                    Скачать диплом
+                </a>
+            </div>
+        </div>
+
+
+        <header class="cabinet__header">
+            <h3 class="cabinet__header-name">
+                Отчет о работе оффлайн площадки:
+            </h3>
+        </header>
+        <p class="cabinet__desc">
+            Отчет еще не был отправлен.
+        </p>
+        <div class="start_btns_wrap">
+            <button class="btn btn--blue">
+                Отправить отчет по площадке
+            </button>
+        </div>
+    </section>
+    
+	//= templates/footer.html
+        
+
+</div>
+<!-- scripts -->
+    <script src='libs/jquery/dist/jquery.min.js'></script>
+    <script src='libs/jquery.maskedinput.js'></script>
+    <script src='libs/slick-carousel/slick/slick.min.js'></script>
+	<script src="js/main.js"></script> <!-- main scripts -->
+<!-- scripts -->
+</body>
+</html>

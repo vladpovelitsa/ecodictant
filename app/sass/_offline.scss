@@ -148,6 +148,24 @@
             }
         }
     }
+    &__download {
+        padding: 19px 32px;
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        border-radius: 3px;
+        box-shadow: 0 10px 20px #E6F1F9;
+        &-name {
+            font-size: 20px;
+            color: #02517A;
+            line-height: 1.3;
+        }
+        .btn {
+            padding: 5px 18px 9px;
+        }
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -196,7 +214,22 @@
         }
     }
 }
-
+@media screen and (max-width: 900px) {
+    .places {
+        
+        &__download {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px;
+            &-name {
+                margin-bottom: 20px;
+            }
+            .btn {
+                font-size: 12px;
+            }
+        }
+    }
+}
 @media screen and (max-width: 767px) {
     .places {
         &__item {

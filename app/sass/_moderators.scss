@@ -1,0 +1,19 @@
+.modetator__buttons {
+    max-width: 418px;
+    margin: 0 auto 50px;
+    .btn {
+        height: 52px;
+        margin-bottom: 20px;
+    }   
+}
+
+.report {
+    margin-top: 46px;
+    .reg_field {
+        flex-direction: column;
+        align-items: flex-start;
+        &-label {
+            margin-bottom: 15px;
+        }
+    }
+}

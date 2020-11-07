@@ -49,6 +49,7 @@
     font-size: 14px;
     line-height: 1.4;
     text-align: center;
+    position: relative;
     &_label {
         display: block;
         color:#212529;
@@ -74,8 +75,32 @@
         .input_block_label {
             color: #ff0000;
         }
-
-
+    
+    }
+    .input_block__flag_error {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate(20px, -50%);
+        background: #FF0000;
+        text-align: center;
+        color: #fff;
+        width: 100vw;
+        max-width: 280px;
+        padding: 6px 15px;
+        font-size: 14px;
+        &:before {
+            content:'';
+            display: block;
+            width: 11px;
+            height: 11px;
+            transform: translate(-50%,-50%) rotate(45deg);
+            background: #FF0000;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 5;
+        }
     }
 }
 .reg { 
@@ -105,7 +130,13 @@
         }
     }
 }
-
+@media screen and (max-width: 1250px) {
+    .input_block {
+        .input_block__flag_error {
+            display: none;
+        }
+    }
+}
 
 @media screen and (max-width: 767px) {
     .reg {

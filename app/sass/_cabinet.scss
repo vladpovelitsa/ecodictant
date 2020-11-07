@@ -3,7 +3,7 @@
     &__header {
         display: flex;
         align-items: center;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         width: 100%;
         &-name {
             font-size: 20px;
@@ -83,13 +83,34 @@
                 font-size: 16px;
                 line-height: 1.5;
             }
+            &-status {
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+                margin-left: auto;
+                svg {
+                    margin-right: 15px;
+                }
+                &--success {
+                    color:#98C22A;
+                }
+            }
+            &-link {
+                font-weight: 700;
+                color: #02517A;
+                display: block;
+                margin-left: 72px;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
     &__desc {
         font-size: 16px;
         line-height: 2;
         color:#212529;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         
     }
 }
@@ -116,8 +137,12 @@
 }
 
 .start_btns_wrap {
+    margin-bottom: 55px;
     display: flex;
     flex-wrap: wrap;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
     .btn {
         height: 52px;
         width: 100%;
