@@ -3148,6 +3148,16 @@ nav {
       stroke-width: 2;
       fill-opacity: 1 !important;
       fill: #1E3685; }
+    .map__svg .st1#REG-18000-OUTLINE, .map__svg .st1#REG-18000-OUTLINE * {
+      stroke-width: 2;
+      fill-opacity: 1 !important;
+      fill: red; }
+    .map__svg .st1#REG-18000-OUTLINE.active, .map__svg .st1#REG-18000-OUTLINE.active * {
+      stroke-width: 2;
+      fill-opacity: 1 !important;
+      fill: #1E3685; }
+    .map__svg .st1 * {
+      pointer-events: none; }
   .map__sort {
     display: -webkit-box;
     display: -webkit-flex;

@@ -12,7 +12,25 @@
                     fill: #1E3685;
                 }
             }
+            &#REG-18000-OUTLINE {
+                &, * {
+                    stroke-width: 2;
+                    fill-opacity: 1 !important;
+                    fill: red;
+                }
+                &.active {
+                    &, * {
+                        stroke-width: 2;
+                        fill-opacity: 1 !important;
+                        fill: #1E3685;
+                    }
+                }
+            }
         }
+        .st1 *{
+            pointer-events: none;
+        } 
+
     }
     &__sort {
         display: flex;

@@ -497,14 +497,29 @@ function resetChoise(){
 document.addEventListener('click', resetChoise)
 
 function mapHightlighter() {
+
   var el = event.target;
+  var fakeSelect = document.querySelector('.select-selected');
+  var hiddenSelect = document.querySelector('#hiddenSelect');
 
   if (el.classList.contains('st1')){
     document.querySelectorAll('.st1').forEach(function(item){
       item.classList.remove('active')
     })
     el.classList.add('active')
+    if(el.getAttribute('data-region') == '22') {
+      hiddenSelect.setAttribute('value', el.getAttribute('data-region'))
+      fakeSelect.innerText = el.getAttribute('data-region')
+    }
   }
-  
+  if(el.classList.contains('same-as-selected')){
+    document.querySelectorAll('.st1').forEach(function(item){
+      if(item.getAttribute('data-region') == parseInt(el.getAttribute('data-value'))) {
+        item.classList.add('active')
+      }
+    })
+  }
 }
+
+
 document.addEventListener('click', mapHightlighter)
