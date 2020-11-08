@@ -3142,22 +3142,34 @@ nav {
 .map {
   padding-bottom: 50px; }
   .map__svg {
-    margin-top: 100px;
-    margin-bottom: 50px; }
-    .map__svg .st1.active, .map__svg .st1.active * {
-      stroke-width: 2;
-      fill-opacity: 1 !important;
-      fill: #1E3685; }
-    .map__svg .st1#REG-18000-OUTLINE, .map__svg .st1#REG-18000-OUTLINE * {
-      stroke-width: 2;
-      fill-opacity: 1 !important;
-      fill: red; }
-    .map__svg .st1#REG-18000-OUTLINE.active, .map__svg .st1#REG-18000-OUTLINE.active * {
-      stroke-width: 2;
-      fill-opacity: 1 !important;
-      fill: #1E3685; }
-    .map__svg .st1 * {
-      pointer-events: none; }
+    margin: 100px auto 50px;
+    max-width: 1400px;
+    width: 100%;
+    position: relative; }
+    .map__svg svg {
+      position: absolute;
+      top: 0;
+      left: 49.5%;
+      -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      width: 100%;
+      height: 100%; }
+      .map__svg svg .st1 {
+        fill: transparent;
+        -webkit-transition: .5s;
+        transition: .5s;
+        stroke: none;
+        cursor: pointer; }
+        .map__svg svg .st1[data-region=""] {
+          fill: red; }
+        .map__svg svg .st1[id='29'] {
+          position: relative;
+          z-index: 5; }
+        .map__svg svg .st1:hover {
+          fill: #1E3685; }
+        .map__svg svg .st1.active {
+          fill: #1E3685; }
   .map__sort {
     display: -webkit-box;
     display: -webkit-flex;

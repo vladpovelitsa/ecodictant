@@ -1,35 +1,40 @@
 .map {
     padding-bottom: 50px;
     &__svg {
-        margin-top: 100px;
-        margin-bottom: 50px;
+        margin: 100px auto 50px;
+        max-width: 1400px;
+        width: 100%;
+        position: relative;
 
-        .st1 {
-            &.active {
-                &, * {
-                    stroke-width: 2;
-                    fill-opacity: 1 !important;
+        svg {
+            position: absolute;
+            top: 0;
+            left:49.5%;
+            transform: translate(-50%,0);
+            width: 100%;
+            height: 100%;
+            // max-width: 1400px;
+
+            .st1{
+                fill: transparent;
+                transition: .5s;
+                stroke: none;
+                cursor: pointer;
+                &[data-region=""]{
+                    fill: red;
+                }
+                &[id='29'] {
+                    position: relative;z-index: 5;
+                }
+                &:hover {
+                    fill: #1E3685;
+                }
+                &.active {
                     fill: #1E3685;
                 }
             }
-            &#REG-18000-OUTLINE {
-                &, * {
-                    stroke-width: 2;
-                    fill-opacity: 1 !important;
-                    fill: red;
-                }
-                &.active {
-                    &, * {
-                        stroke-width: 2;
-                        fill-opacity: 1 !important;
-                        fill: #1E3685;
-                    }
-                }
-            }
+
         }
-        .st1 *{
-            pointer-events: none;
-        } 
 
     }
     &__sort {

@@ -507,14 +507,15 @@ function mapHightlighter() {
       item.classList.remove('active')
     })
     el.classList.add('active')
-    if(el.getAttribute('data-region') == '22') {
-      hiddenSelect.setAttribute('value', el.getAttribute('data-region'))
-      fakeSelect.innerText = el.getAttribute('data-region')
-    }
+    hiddenSelect.setAttribute('value', el.getAttribute('data-region'))
+    fakeSelect.innerText = el.getAttribute('data-region')
   }
   if(el.classList.contains('same-as-selected')){
     document.querySelectorAll('.st1').forEach(function(item){
-      if(item.getAttribute('data-region') == parseInt(el.getAttribute('data-value'))) {
+      item.classList.remove('active')
+    })
+    document.querySelectorAll('.st1').forEach(function(item){
+      if(item.getAttribute('data-region') == el.getAttribute('data-value')) {
         item.classList.add('active')
       }
     })
