@@ -501,7 +501,9 @@ function mapHightlighter() {
   var el = event.target;
   var fakeSelect = document.querySelector('.select-selected');
   var hiddenSelect = document.querySelector('#hiddenSelect');
-
+  if(document.querySelector('.places__download')) {
+    var downloads = downloads.querySelectorAll('.places__download')
+  }
   if (el.classList.contains('st1')){
     document.querySelectorAll('.st1').forEach(function(item){
       item.classList.remove('active')
@@ -521,6 +523,8 @@ function mapHightlighter() {
     })
   }
 }
+
+
 
 
 document.addEventListener('click', mapHightlighter)

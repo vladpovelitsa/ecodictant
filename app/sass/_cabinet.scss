@@ -203,7 +203,8 @@
         }
         &__desc,
         .start_btns_wrap {
-            padding: 0 15px;
+            padding-left: calc(50vw - 250px);
+    		padding-right: calc(50vw - 250px); 
         }
         &__table {
             border-radius: 0;
@@ -264,7 +265,9 @@
 @media screen and (max-width:515px) {
     .cabinet {
         &__header,
-        &__table_row {
+        &__table_row,
+        &__desc,
+        .start_btns_wrap {
             padding-left: calc(50vw - 175px);
             padding-right: calc(50vw - 175px);
         }
@@ -273,7 +276,9 @@
 @media screen and (max-width:400px) {
     .cabinet {
         &__header,
-        &__table_row {
+        &__table_row,
+        &__desc,
+        .start_btns_wrap {
             padding-left: calc(50vw - 170px);
             padding-right: calc(50vw - 170px);
         }
@@ -282,7 +287,9 @@
 @media screen and (max-width:355px) {
     .cabinet {
         &__header,
-        &__table_row {
+        &__table_row,
+        &__desc,
+        .start_btns_wrap {
             padding-left: calc(50vw - 150px);
             padding-right: calc(50vw - 150px);
         }

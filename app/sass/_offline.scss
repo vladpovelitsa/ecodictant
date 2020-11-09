@@ -26,10 +26,13 @@
                 &[id='29'] {
                     position: relative;z-index: 5;
                 }
-                &:hover {
+                
+                &:hover,
+                &:hover path {
                     fill: #1E3685;
                 }
-                &.active {
+                &.active,
+                &.active path {
                     fill: #1E3685;
                 }
             }
@@ -185,7 +188,14 @@
             color: #02517A;
             line-height: 1.3;
         }
+        &-btns {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color:#212529;
+        }
         .btn {
+            margin-left: 20px;
             padding: 5px 18px 9px;
         }
     }
@@ -267,4 +277,23 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 515px) {
+    .places {
+        &__download {
+            &-btns {
+                flex-wrap: wrap;
+                p {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+                .btn {
+                    margin-left: 0;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
 }
