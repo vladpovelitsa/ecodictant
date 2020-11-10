@@ -3305,7 +3305,6 @@ nav {
   .places__info-item:nth-of-type(3) {
     width: 26%; }
   .places__download {
-    padding: 19px 32px;
     margin-bottom: 25px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -3315,17 +3314,19 @@ nav {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     background: #fff;
     border-radius: 3px;
     box-shadow: 0 10px 20px #E6F1F9; }
     .places__download-name {
       font-size: 20px;
       color: #02517A;
-      line-height: 1.3; }
+      line-height: 1.3;
+      padding: 19px 32px; }
     .places__download-btns {
       display: -webkit-box;
       display: -webkit-flex;
@@ -3336,10 +3337,16 @@ nav {
       -ms-flex-align: center;
       align-items: center;
       font-size: 14px;
-      color: #212529; }
+      color: #212529;
+      padding: 19px 32px; }
     .places__download .btn {
       margin-left: 20px;
       padding: 5px 18px 9px; }
+    .places__download.hidden {
+      display: none; }
+    .places__download .places__info-wrap {
+      border-top: 1px solid #CED9F0;
+      border-bottom: 1px solid #CED9F0; }
 
 @media screen and (max-width: 1200px) {
   .map__sort {
@@ -3392,8 +3399,7 @@ nav {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
-    align-items: flex-start;
-    padding: 15px; }
+    align-items: flex-start; }
     .places__download-name {
       margin-bottom: 20px; }
     .places__download .btn {

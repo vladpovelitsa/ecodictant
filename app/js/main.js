@@ -502,7 +502,7 @@ function mapHightlighter() {
   var fakeSelect = document.querySelector('.select-selected');
   var hiddenSelect = document.querySelector('#hiddenSelect');
   if(document.querySelector('.places__download')) {
-    var downloads = downloads.querySelectorAll('.places__download')
+    var downloads = document.querySelectorAll('.places__download')
   }
   if (el.classList.contains('st1')){
     document.querySelectorAll('.st1').forEach(function(item){
@@ -511,6 +511,16 @@ function mapHightlighter() {
     el.classList.add('active')
     hiddenSelect.setAttribute('value', el.getAttribute('data-region'))
     fakeSelect.innerText = el.getAttribute('data-region')
+
+    downloads.forEach(function(region){
+      region.classList.add('hidden')
+
+      if(region.getAttribute('data-region') == parseInt(el.getAttribute('data-region'))){
+        region.classList.remove('hidden')
+      }
+      console.log(el.data-region)
+    })
+
   }
   if(el.classList.contains('same-as-selected')){
     document.querySelectorAll('.st1').forEach(function(item){
@@ -520,6 +530,15 @@ function mapHightlighter() {
       if(item.getAttribute('data-region') == el.getAttribute('data-value')) {
         item.classList.add('active')
       }
+    })
+
+    downloads.forEach(function(region){
+      region.classList.add('hidden')
+
+      if(region.getAttribute('data-region') == parseInt(el.getAttribute('data-value'))){
+        region.classList.remove('hidden')
+      }
+      console.log(el.data-region)
     })
   }
 }

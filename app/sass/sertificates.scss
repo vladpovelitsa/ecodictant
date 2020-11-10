@@ -1,0 +1,35 @@
+.sertificate {
+    width: 828px;
+    height: 1170px;
+    position: relative;
+    margin: 50px auto;
+    h1 {
+        position: absolute;
+        top: 549px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        line-height: 1.5;
+        font-family: 'Tomes New Roman', serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        small {
+            display: block;
+            font-size: 30px;
+            line-height: 2;
+        }
+    }
+    &--winner1 {
+        background: url(../img/sertificate_winner-1.png) top center no-repeat;
+    }
+    &--winner2 {
+        background: url(../img/sertificate_winner-2.png) top center no-repeat;
+    }
+    &--winner3 {
+        background: url(../img/sertificate_winner-3.png) top center no-repeat;
+    }
+    &--participant {
+        background: url(../img/sertificate_participant.png) top center no-repeat;
+    }
+}
