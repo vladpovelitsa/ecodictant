@@ -3284,6 +3284,8 @@ nav {
         background: #7F8FA4; }
   .places__info-toggler {
     display: none; }
+    .places__info-toggler * {
+      pointer-events: none; }
   .places__info-wrap {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3374,7 +3376,9 @@ nav {
     border: none;
     width: 100%;
     padding: 12px 30px;
-    font-size: 16px; }
+    font-size: 16px;
+    border-top: 1px solid #CED9F0;
+    border-bottom: 1px solid #CED9F0; }
     .places__info-toggler svg {
       pointer-events: none; }
     .places__info-toggler.active {
@@ -3646,7 +3650,7 @@ nav {
         .cabinet__table_row .btn {
           position: absolute;
           top: 50%;
-          right: 16px;
+          right: 32px;
           -webkit-transform: translate(0, -50%);
           -ms-transform: translate(0, -50%);
           transform: translate(0, -50%); }
@@ -3666,7 +3670,8 @@ nav {
       margin-bottom: 30px;
       margin-right: 0; }
   .diploma__img, .diploma__desc {
-    padding: 0 15px;
+    padding-left: calc(50vw - 250px);
+    padding-right: calc(50vw - 250px);
     max-width: unset; }
   .mobile_break {
     display: block; }
@@ -3678,19 +3683,31 @@ nav {
   .cabinet__header, .cabinet__table_row, .cabinet__desc,
   .cabinet .start_btns_wrap {
     padding-left: calc(50vw - 175px);
-    padding-right: calc(50vw - 175px); } }
+    padding-right: calc(50vw - 175px); }
+  .diploma__img, .diploma__desc {
+    padding-left: calc(50vw - 175px);
+    padding-right: calc(50vw - 175px);
+    max-width: unset; } }
 
 @media screen and (max-width: 400px) {
   .cabinet__header, .cabinet__table_row, .cabinet__desc,
   .cabinet .start_btns_wrap {
     padding-left: calc(50vw - 170px);
-    padding-right: calc(50vw - 170px); } }
+    padding-right: calc(50vw - 170px); }
+  .diploma__img, .diploma__desc {
+    padding-left: calc(50vw - 170px);
+    padding-right: calc(50vw - 170px);
+    max-width: unset; } }
 
 @media screen and (max-width: 355px) {
   .cabinet__header, .cabinet__table_row, .cabinet__desc,
   .cabinet .start_btns_wrap {
     padding-left: calc(50vw - 150px);
-    padding-right: calc(50vw - 150px); } }
+    padding-right: calc(50vw - 150px); }
+  .diploma__img, .diploma__desc {
+    padding-left: calc(50vw - 150px);
+    padding-right: calc(50vw - 150px);
+    max-width: unset; } }
 
 .pass_page {
   padding-bottom: 50px; }

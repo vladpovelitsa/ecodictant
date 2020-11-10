@@ -380,6 +380,13 @@ function placesInfoToggler() {
   if(e.classList.contains('places__info-toggler')) {
     e.classList.toggle('active')
     e.nextElementSibling.classList.toggle('active')
+    if(e.classList.contains('active')){
+      e.querySelector('.places__info-toggler-text').innerText = 'Свернуть подробное описание'
+    }
+    else {
+      e.querySelector('.places__info-toggler-text').innerText = 'Развернуть подробное описание'
+
+    }
   }
 }
 document.addEventListener('click', placesInfoToggler)

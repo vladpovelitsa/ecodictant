@@ -216,7 +216,7 @@
                 .btn {
                     position: absolute;
                     top: 50%;
-                    right: 16px;
+                    right: 32px;
                     transform: translate(0,-50%);
                 }
             }
@@ -249,7 +249,8 @@
     .diploma {
         &__img,
         &__desc {
-            padding: 0 15px;
+            padding-left: calc(50vw - 250px);
+    		padding-right: calc(50vw - 250px); 
             max-width: unset;
         }
     }
@@ -272,6 +273,14 @@
             padding-right: calc(50vw - 175px);
         }
     }
+    .diploma {
+        &__img,
+        &__desc {
+            padding-left: calc(50vw - 175px);
+    		padding-right: calc(50vw - 175px); 
+            max-width: unset;
+        }
+    }
 }
 @media screen and (max-width:400px) {
     .cabinet {
@@ -283,6 +292,14 @@
             padding-right: calc(50vw - 170px);
         }
     }
+    .diploma {
+        &__img,
+        &__desc {
+            padding-left: calc(50vw - 170px);
+    		padding-right: calc(50vw - 170px); 
+            max-width: unset;
+        }
+    }
 }
 @media screen and (max-width:355px) {
     .cabinet {
@@ -292,6 +309,14 @@
         .start_btns_wrap {
             padding-left: calc(50vw - 150px);
             padding-right: calc(50vw - 150px);
+        }
+    }
+    .diploma {
+        &__img,
+        &__desc {
+            padding-left: calc(50vw - 150px);
+    		padding-right: calc(50vw - 150px); 
+            max-width: unset;
         }
     }
 }

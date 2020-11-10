@@ -152,6 +152,9 @@
     &__info {
         &-toggler {
             display: none;
+            * {
+                pointer-events: none;
+            }
         }
         &-wrap {
             display: flex;
@@ -236,6 +239,8 @@
                 width: 100%;
                 padding: 12px 30px;
                 font-size: 16px;
+                border-top: 1px solid #CED9F0;
+                border-bottom: 1px solid #CED9F0;
                 svg {
                     pointer-events: none;
                 }
