@@ -522,7 +522,7 @@ function mapHightlighter() {
     downloads.forEach(function(region){
       region.classList.add('hidden')
 
-      if(region.getAttribute('data-region') == parseInt(el.getAttribute('data-region'))){
+      if(region.getAttribute('data-region') == el.getAttribute('data-region')){
         region.classList.remove('hidden')
       }
       console.log(el.data-region)
@@ -542,7 +542,7 @@ function mapHightlighter() {
     downloads.forEach(function(region){
       region.classList.add('hidden')
 
-      if(region.getAttribute('data-region') == parseInt(el.getAttribute('data-value'))){
+      if(region.getAttribute('data-region') == el.getAttribute('data-value')){
         region.classList.remove('hidden')
       }
       console.log(el.data-region)
@@ -550,7 +550,10 @@ function mapHightlighter() {
   }
 }
 
-
+$('.promo__slider').slick({
+  dots: false,
+  slidesToShow: 1,
+})
 
 
 document.addEventListener('click', mapHightlighter)
