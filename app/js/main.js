@@ -234,7 +234,30 @@ $('.partners__container--general .partners__wrap').slick({
       }
     ]
   })
-function countDown(startYear, startMouth, startDay){
+  $('.partners__container--participants .partners__wrap').slick({
+    infinite: true,
+    mobileFirst: true,
+    slidesToShow: 2,
+    autoplay: true,
+    autoplaySpeed: 4000,
+  
+    responsive: [ {
+      breakpoint: 1250,
+      settings: 'unslick',
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          // variableWidth: true,
+          slidesToShow: 4,
+  
+        }
+      }
+    ]
+  })
+
+
+  function countDown(startYear, startMouth, startDay){
   const startDate = new Date(startYear, startMouth, startDay);
   
   let tic = setInterval(function() {

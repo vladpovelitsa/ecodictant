@@ -110,7 +110,7 @@
                 top: 0;
                 left: 100%;
                 font-weight: 400;
-                transform: translate(20%,0);
+                transform: translate(20%,15px);
             }
 
         }
@@ -319,6 +319,7 @@
         }
         &--official {
             width: 100%;
+            margin-top: 50px;
             .partners__wrap {
                 width: 100%;
                 margin-bottom: 80px;
@@ -340,6 +341,30 @@
                     margin-right: 0;
                     max-width: 100%;
                     justify-content: space-between;
+                }
+            }
+            .partners__header {
+                margin-bottom: 50px;
+            }
+        }
+        &--participants {
+            width: 100%;
+            .partners__wrap {
+                width: 100%;
+                margin-bottom: 80px;
+                .partners__logo {
+                    margin-right: 0;
+                    max-width: 100%;
+                    justify-content: space-between;
+                    padding: 0 13px;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: #F6F6FD;
+                        border-radius: 6px;
+                        min-height: 100px;
+                    }
                 }
             }
             .partners__header {
@@ -523,17 +548,20 @@
         transform: translate(0,-50%);    
         &.slick-prev {
             left: 0px;
+            border-radius:0 6px 6px 0;
         }
         &.slick-next {
             right: 0px;
+            border-radius:6px 0 0 6px ;
         }
     }
     &__item {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 45px;
+        padding-bottom: 45px;
         position: relative;
         overflow: hidden;
         display: block;
+        min-height: 250px;
         &-logo {
             margin-bottom: 46px;
             display: block;
@@ -620,6 +648,14 @@
            
         }
     }
+    &__item4 {
+        min-height: 250px;
+        background: url('../img/bnr4-bg.jpg') center no-repeat;
+        background-size: cover;
+        display: flex !important;
+        align-items: flex-end;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 1250px) {
@@ -634,30 +670,6 @@
             &-heading {
                 margin-bottom: 20px;
                 font-size: 30px;
-               
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .promo {
-        &__item2 {
-            align-items: flex-start;
-            &:before,
-            &:after {
-                display: none;
-            }
-        }
-        &__item3 {
-            flex-direction: column;
-            align-items: center;
-            &-content {
-                font-size: 16px;
-            }
-            &-heading {
-                margin-bottom: 20px;
-                font-size: 24px;
                
             }
         }
@@ -972,6 +984,20 @@
         }
     }
     .partners {
+        &__logo {
+            margin: 0 20px !important;
+            max-width: unset !important;
+            max-height: unset !important;
+
+            a {
+                display: block;
+                min-width: unset;
+            }
+            img {
+                min-width: 40px;
+                margin: 0 auto;
+            }
+        }
         &__container {
             max-width: 100%;
             width: 100%;
@@ -1001,6 +1027,12 @@
                     top: -100px;
                 }
             }
+            &--participants {
+                .partners__logo {
+                    padding: 0;
+                    margin: 0 !important;
+                }
+            }
         }
         &__header {
             margin-bottom: 35px;
@@ -1028,20 +1060,7 @@
                 }
             }
         }
-        &__logo {
-            margin: 0 20px !important;
-            max-width: unset !important;
-            max-height: unset !important;
-
-            a {
-                display: block;
-                min-width: unset;
-            }
-            img {
-                min-width: 40px;
-                margin: 0 auto;
-            }
-        }
+        
     }       
     .organizations {
         &__container {
@@ -1070,6 +1089,8 @@
     }
     .promo {
         &__item {
+            padding-top: 40px;
+            padding-bottom: 40px;
            min-height: 250px;
             &-text {
                 font-size: 30px;
@@ -1252,6 +1273,7 @@
                 font-size: 18px;
             }
         }
+        
     }
     .partners__logo {
         max-width: unset;
@@ -1299,6 +1321,9 @@
             font-size: 16px;
             max-width: 330px;
         }
+        &__logo {
+            padding: 10px;
+        }
     }
     .reg_info {
         &__heading {
@@ -1330,27 +1355,50 @@
         }
     }
     .promo {
+
         &__item {
-           min-height: 250px;
-           padding-right: 0;
-           padding-top: 0;
-           display: flex;
-           flex-direction: column;
-            &-text {
-                font-size: 30px;
-                color: #008C95;
-                margin-bottom: 30px;
-                max-width: 350px;
+            min-height: 250px;
+            display: flex;
+            padding-top: 20px;
+            padding-bottom: 85px;
+                &-text {
+                    font-size: 28px;
+                    color: #008C95;
+                    margin-bottom: 0px;
+                    max-width: 350px;
+                }
+                &-img {
+                    // max-width: 100%;
+                    order: -1;
+                    margin-bottom: 0px;
+                }
+                &-logo {
+                    margin-bottom: 20px;
+                }
             }
-            &-img {
-                position: static;
-                max-width: 100%;
-                margin-left: auto;
-                order: -1;
-                margin-bottom: 30px;
+        
+        &__item2 {
+            align-items: flex-start;
+            &:before,
+            &:after {
+                display: none;
             }
-            &-partner {
-                position: static;
+        }
+        &__item3 {
+            flex-direction: column;
+            align-items: center;
+            &-content {
+                font-size: 16px;
+            }
+            &-heading {
+                margin-bottom: 20px;
+                font-size: 24px;
+            }
+            &-logo {
+                max-width: 150px;
+            }
+            &-content {
+                font-size: 14px;
             }
         }
     }
