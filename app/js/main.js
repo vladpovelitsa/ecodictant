@@ -179,10 +179,7 @@ $('.partners__container--official .partners__wrap').slick({
   autoplay: true,
   autoplaySpeed: 4000,
 
-  responsive: [ {
-    breakpoint: 1250,
-    settings: 'unslick',
-    },
+  responsive: [
     {
       breakpoint: 767,
       settings: {
@@ -190,7 +187,15 @@ $('.partners__container--official .partners__wrap').slick({
         slidesToShow: 4,
 
       }
-    }
+    },
+    {
+      breakpoint: 1250,
+      settings: {
+        // variableWidth: true,
+        slidesToShow: 6,
+
+      }
+      },
   ]
 })
 $('.partners__container--info .partners__wrap').slick({
