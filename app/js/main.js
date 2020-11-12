@@ -521,7 +521,6 @@ document.addEventListener('click', videoToggler)
 function resetChoise(){
   var el = event.target
   if(el.classList.contains('reset_choise')) {
-    console.log(el.parentNode.parentNode)
     var inputs = el.parentNode.parentNode.querySelectorAll('input')
     for(var i = 0; i <= inputs.length - 1; i++) {
       inputs[i].checked = false
@@ -553,7 +552,6 @@ function mapHightlighter() {
       if(region.getAttribute('data-region') == el.getAttribute('data-region')){
         region.classList.remove('hidden')
       }
-      console.log(el.data-region)
     })
 
   }
