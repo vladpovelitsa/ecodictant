@@ -557,6 +557,23 @@ function mapHightlighter() {
     })
 
   }
+  if (el.parentNode.classList.contains('st1')){
+    document.querySelectorAll('.st1').forEach(function(item){
+      item.classList.remove('active')
+    })
+    el.parentNode.classList.add('active')
+    hiddenSelect.setAttribute('value', el.parentNode.getAttribute('data-region'))
+    fakeSelect.innerText = el.parentNode.getAttribute('data-region')
+
+    downloads.forEach(function(region){
+      region.classList.add('hidden')
+
+      if(region.getAttribute('data-region') == el.parentNode.getAttribute('data-region')){
+        region.classList.remove('hidden')
+      }
+    })
+
+  }
   if(el.classList.contains('same-as-selected')){
     document.querySelectorAll('.st1').forEach(function(item){
       item.classList.remove('active')
@@ -573,10 +590,12 @@ function mapHightlighter() {
       if(region.getAttribute('data-region') == el.getAttribute('data-value')){
         region.classList.remove('hidden')
       }
-      console.log(el.data-region)
     })
   }
 }
+
+document.addEventListener('click', mapHightlighter)
+
 
 $('.promo__slider').slick({
   dots: false,
@@ -593,5 +612,3 @@ $('.promo__slider').slick({
   ]
 })
 
-
-document.addEventListener('click', mapHightlighter)
