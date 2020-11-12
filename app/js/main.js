@@ -581,6 +581,16 @@ function mapHightlighter() {
 $('.promo__slider').slick({
   dots: false,
   slidesToShow: 1,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        arrows:false,
+      }
+    },
+  ]
 })
 
 
