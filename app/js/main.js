@@ -205,10 +205,7 @@ $('.partners__container--info .partners__wrap').slick({
   autoplay: true,
   autoplaySpeed: 4000,
 
-  responsive: [ {
-    breakpoint: 1250,
-    settings: 'unslick',
-    },
+  responsive: [ 
     {
       breakpoint: 767,
       settings: {
@@ -216,7 +213,15 @@ $('.partners__container--info .partners__wrap').slick({
         slidesToShow: 4,
 
       }
-    }
+    },
+    {
+      breakpoint: 1250,
+      settings: {
+        // variableWidth: true,
+        slidesToShow: 6,
+
+      }
+      },
   ]
 })
 $('.partners__container--general .partners__wrap').slick({
@@ -605,6 +610,82 @@ $('.promo__slider').slick({
       breakpoint: 767,
       settings: {
         arrows:false,
+      }
+    },
+  ]
+})
+
+// if(document.querySelector('.instructions__slider')) {
+//   document.querySelectorAll('.instructions__slider').forEach(function(slider){
+//     if(slider.children.length > 3){
+//         $(slider).slick({
+//           slidesToShow: 3,
+//           responsive: [
+//             {
+//               breakpoint: 1250,
+//               settings: {
+//                 slidesToShow:2,
+//               }
+//             },
+//           ]
+//         })
+//     }
+//   })
+// } 
+
+$('.instructions__slider-1').slick({
+  slidesToShow: 1,
+  mobileFirst: true,
+  responsive: [
+    {
+      breakpoint: 515,
+      settings: 'unslick'
+    },
+  ]
+})
+
+$('.instructions__slider-2').slick({
+  slidesToShow: 1,
+  mobileFirst: true,
+  responsive: [
+    {
+      breakpoint: 515,
+      settings: 'unslick'
+    },
+  ]
+})
+
+
+$('.instructions__slider-3').slick({
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 1250,
+      settings: {
+        slidesToShow:2,
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow:1,
+      }
+    },
+  ]
+})
+$('.instructions__slider-4').slick({
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 1250,
+      settings: {
+        slidesToShow:2,
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow:1,
       }
     },
   ]

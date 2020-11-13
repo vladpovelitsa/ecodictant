@@ -354,14 +354,33 @@
                 width: 100%;
                 margin-bottom: 80px;
                 .partners__logo {
-                    margin-right: 0;
+                    margin-right: 20px;
                     max-width: 100%;
-                    justify-content: space-between;
+                    justify-content: center;
+                    display: flex !important;
+                    align-items: center;
+                    min-height: 90px;
+                    img {
+                        max-width: 180px;
+                    }
                 }
             }
             .partners__header {
                 margin-bottom: 50px;
             }
+            .slick-arrow {
+                position: absolute;
+                top: -100px;
+                
+                &.slick-next {
+                    right: 0;
+                }
+                &.slick-prev {
+                    right: 45px;
+                    left: auto;
+                }
+
+            } 
         }
         &--participants {
             width: 100%;
@@ -1440,6 +1459,9 @@
             padding-right:  calc(50vw - 175px);
             padding-left:  calc(50vw - 175px);
         }
+    }
+    .support__item {
+        margin-right: 15px;
     }
 }
 @media screen and (max-width: 400px) {

@@ -1547,14 +1547,33 @@ nav {
       width: 100%;
       margin-bottom: 80px; }
       .partners__container--info .partners__wrap .partners__logo {
-        margin-right: 0;
+        margin-right: 20px;
         max-width: 100%;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-        justify-content: space-between; }
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        display: -webkit-box !important;
+        display: -webkit-flex !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        min-height: 90px; }
+        .partners__container--info .partners__wrap .partners__logo img {
+          max-width: 180px; }
     .partners__container--info .partners__header {
       margin-bottom: 50px; }
+    .partners__container--info .slick-arrow {
+      position: absolute;
+      top: -100px; }
+      .partners__container--info .slick-arrow.slick-next {
+        right: 0; }
+      .partners__container--info .slick-arrow.slick-prev {
+        right: 45px;
+        left: auto; }
   .partners__container--participants {
     width: 100%; }
     .partners__container--participants .partners__wrap {
@@ -2447,7 +2466,9 @@ nav {
     right: calc(50vw - 175px + 50px); }
   .faces .section_heading {
     padding-right: calc(50vw - 175px);
-    padding-left: calc(50vw - 175px); } }
+    padding-left: calc(50vw - 175px); }
+  .support__item {
+    margin-right: 15px; } }
 
 @media screen and (max-width: 400px) {
   .faces__text {
@@ -3048,7 +3069,7 @@ nav {
       display: block;
       width: 49%; }
   .instructions__heading {
-    font-size: 20px;
+    font-size: 26px;
     line-height: 1.6;
     font-weight: 700;
     color: #02517A;
@@ -3121,6 +3142,58 @@ nav {
     .instructions__file:last-of-type {
       padding-bottom: 0;
       border-bottom: none; }
+    .instructions__file_wrap {
+      display: -webkit-box !important;
+      display: -webkit-flex !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+      width: 100%;
+      margin-right: 40px; }
+      .instructions__file_wrap-pic {
+        display: block;
+        min-width: 130px; }
+      .instructions__file_wrap-content {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-left: 40px; }
+        .instructions__file_wrap-content .btn {
+          margin-top: auto;
+          width: 0;
+          min-width: 127px;
+          height: 52px; }
+  .instructions_slider__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .instructions__slider {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+    .instructions__slider .slick-arrow {
+      position: absolute;
+      top: -95px;
+      left: auto;
+      right: 0; }
+      .instructions__slider .slick-arrow.slick-prev {
+        right: 45px; }
+
+.instructions__slider-1 .instructions__file_wrap, .instructions__slider-2 .instructions__file_wrap {
+  width: 30%; }
 
 @media screen and (max-width: 1200px) {
   .instructions {
@@ -3143,11 +3216,17 @@ nav {
     .instructions__doc_wrap {
       margin-right: 30px; }
     .instructions__steps,
-    .instructions__item-steps .instructions__heading, .instructions__item-docs, .instructions__item-files {
+    .instructions__item-steps .instructions__heading, .instructions__item-docs, .instructions__item-files, .instructions.instructions_slider__wrap {
       padding-left: 50px;
       padding-right: 50px; }
     .instructions__img {
-      max-width: 100%; } }
+      max-width: 100%; }
+  .instructions__slider-1 .instructions__file_wrap, .instructions__slider-2 .instructions__file_wrap {
+    width: 100%; }
+  .instructions__file_wrap-content {
+    margin-left: 15px; }
+  .instructions__file_wrap {
+    margin-right: 15px; } }
 
 @media screen and (max-width: 767px) {
   .instructions__item-files {
@@ -3156,7 +3235,7 @@ nav {
     .instructions__item-files:last-of-type {
       margin-bottom: 0; }
   .instructions__steps,
-  .instructions__item-steps .instructions__heading, .instructions__item-docs, .instructions__item-files {
+  .instructions__item-steps .instructions__heading, .instructions__item-docs, .instructions__item-files, .instructions.instructions_slider__wrap {
     padding-left: calc(50vw - 250px);
     padding-right: calc(50vw - 250px); } }
 
@@ -3193,7 +3272,7 @@ nav {
 
 @media screen and (max-width: 515px) {
   .instructions__steps,
-  .instructions__item-steps .instructions__heading, .instructions__item-docs, .instructions__item-files {
+  .instructions__item-steps .instructions__heading, .instructions__item-docs, .instructions__item-files, .instructions.instructions_slider__wrap {
     padding-left: calc(50vw - 175px);
     padding-right: calc(50vw - 175px); } }
 
@@ -3204,13 +3283,23 @@ nav {
     -ms-flex-pack: justify;
     justify-content: space-between; }
   .instructions__doc_wrap {
-    margin-right: 0; } }
+    margin-right: 0; }
+  .instructions__heading {
+    font-size: 16px;
+    padding-right: 85px; }
+  .instructions__slider-1 .slick-arrow {
+    top: -100px; }
+  .instructions__slider-2 .slick-arrow {
+    top: -90px; }
+  .instructions__slider-3 .slick-arrow, .instructions__slider-4 .slick-arrow {
+    top: -100px; } }
 
 @media screen and (max-width: 400px) {
   __steps,
   __item-steps .instructions__heading,
   __item-docs,
-  __item-files {
+  __item-files,
+  .instructions_slider__wrap {
     padding-left: calc(50vw - 170px);
     padding-right: calc(50vw - 170px); } }
 
@@ -3218,7 +3307,8 @@ nav {
   __steps,
   __item-steps .instructions__heading,
   __item-docs,
-  __item-files {
+  __item-files,
+  .instructions_slider__wrap {
     padding-left: calc(50vw - 150px);
     padding-right: calc(50vw - 150px); } }
 
