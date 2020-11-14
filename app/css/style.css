@@ -4400,7 +4400,9 @@ nav {
       font-size: 12px; }
     .header__test_timer {
       margin-right: 15px;
-      font-size: 12px; }
+      font-size: 12px; } }
+
+@media screen and (max-width: 1024px) {
   .test__question {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
