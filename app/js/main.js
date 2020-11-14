@@ -267,8 +267,8 @@ $('.partners__container--general .partners__wrap').slick({
   })
 
 
-  function countDown(startYear, startMouth, startDay){
-  const startDate = new Date(startYear, startMouth, startDay);
+  function countDown(startYear, startMouth, startDay, startHour){
+  const startDate = new Date(startYear, startMouth, startDay, startHour);
   
   var tic = setInterval(function() {
     var currentDate = new Date;
@@ -291,7 +291,7 @@ $('.partners__container--general .partners__wrap').slick({
 
 }
 if(document.querySelector('.offer__countdown_container')){
-  countDown(2020, 10, 15);
+  countDown(2020, 10, 16, 23);
 }
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
