@@ -27,7 +27,7 @@ var gulp = require('gulp'),
 
 gulp.task('sass', function(done) {
     gulp.src("app/sass/**/*.scss")
-    	.pipe(sourcemaps.init())
+    	// .pipe(sourcemaps.init())
         .pipe(sass({
         	errorLogToConsole: true,
         }))
@@ -35,7 +35,7 @@ gulp.task('sass', function(done) {
         .pipe(autoprefixer({
         	cascade: false,
         }))
-        .pipe(sourcemaps.write('./'))
+        // .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest("app/css/"))
         .pipe(browserSync.stream());
 
@@ -132,7 +132,7 @@ gulp.task('imagemin', function(done) {
     done()
 })
 gulp.task('imageminNews', function(done) {
-    gulp.src('app/news/pic/*.{jpg,jpeg,png,svg,gif}')
+    gulp.src('app/news/pic/*/**.{jpg,jpeg,png,svg,gif}')
       .pipe(imagemin())
       .pipe(gulp.dest('build/news/pic/'));
   
@@ -146,11 +146,16 @@ gulp.task('newsDocx', function(done) {
 })
 gulp.task('buildCss', function(done){
     gulp.src('app/css/**/*.css')
+    .pipe(sass({
+        errorLogToConsole: true,
+        outputStyle: 'compressed',
+    }))
     .pipe(gulp.dest('build/css/'));
     done()
 })
 gulp.task('buildJs', function(done){
     gulp.src('app/js/**/*.js')
+    .pipe(uglify())
     .pipe(gulp.dest('build/js/'));
     done()
 })
@@ -159,9 +164,13 @@ gulp.task('buildFonts', function(done){
     .pipe(gulp.dest('build/fonts/'));
     done()
 })
-
+gulp.task('buildDocs', function(done) {
+    gulp.src('app/news/docx/*')
+      .pipe(gulp.dest('build/news/docx/'));
+  
+      done()
+})
 
 gulp.task('finish', gulp.series('imagemin', 'imageminNews', 'html','news','buildCss','buildJs', 'buildFonts'));
-
 
 gulp.task('default', gulp.series('sass','html','serve'));	

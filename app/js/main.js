@@ -270,17 +270,17 @@ $('.partners__container--general .partners__wrap').slick({
   function countDown(startYear, startMouth, startDay){
   const startDate = new Date(startYear, startMouth, startDay);
   
-  let tic = setInterval(function() {
-    let currentDate = new Date;
-    let daysLeft = (startDate - currentDate) / 8.64e+7;
-    let hoursLeft = ((startDate - currentDate) / 8.64e+7 - Math.floor(daysLeft)) * 24;
-    let minutesLeft = (hoursLeft - Math.floor(hoursLeft)) * 60;
-    let secondsLeft = (minutesLeft - Math.floor(minutesLeft)) * 60;
+  var tic = setInterval(function() {
+    var currentDate = new Date;
+    var daysLeft = (startDate - currentDate) / 8.64e+7;
+    var hoursLeft = ((startDate - currentDate) / 8.64e+7 - Math.floor(daysLeft)) * 24;
+    var minutesLeft = (hoursLeft - Math.floor(hoursLeft)) * 60;
+    var secondsLeft = (minutesLeft - Math.floor(minutesLeft)) * 60;
 
-    let daysValue = document.querySelector('#days');
-    let hoursValue = document.querySelector('#hours');
-    let minutesValue = document.querySelector('#minutes');
-    let secondsValue = document.querySelector('#seconds');
+    var daysValue = document.querySelector('#days');
+    var hoursValue = document.querySelector('#hours');
+    var minutesValue = document.querySelector('#minutes');
+    var secondsValue = document.querySelector('#seconds');
 
     daysValue.innerText = Math.floor(daysLeft) <= 9 ? '0' + Math.floor(daysLeft) : Math.floor(daysLeft);
     hoursValue.innerText = Math.floor(hoursLeft) <= 9 ? '0' + Math.floor(hoursLeft) : Math.floor(hoursLeft)
@@ -425,20 +425,20 @@ function placesInfoToggler() {
 document.addEventListener('click', placesInfoToggler)
 var clipPlay = false
 function findVideos() {
-  let videos = document.querySelectorAll('.clip_cover');
+  var videos = document.querySelectorAll('.clip_cover');
 
-  for (let i = 0; i < videos.length; i++) {
+  for (var i = 0; i < videos.length; i++) {
     setupVideo(videos[i]);
   }
 }
 function setupVideo(video) {
-  let link = video.querySelector('.video__link');
-  let media = video.querySelector('.video__media');
-  let button = video.querySelector('.video__button');
-  let id = parseMediaURL(media);
+  var link = video.querySelector('.video__link');
+  var media = video.querySelector('.video__media');
+  var button = video.querySelector('.video__button');
+  var id = parseMediaURL(media);
 
   video.addEventListener('click', function() {
-    let iframe = createIframe(id);
+    var iframe = createIframe(id);
 
     link.remove();
     button.remove();
@@ -449,14 +449,14 @@ function setupVideo(video) {
   video.classList.add('video--enabled');
 }
 function parseMediaURL(media) {
-  let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
-  let url = media.src;
-  let match = url.match(regexp);
+  var regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+  var url = media.src;
+  var match = url.match(regexp);
 
   return match[1];
 }
 function createIframe(id) {
-  let iframe = document.createElement('iframe');
+  var iframe = document.createElement('iframe');
 
   iframe.setAttribute('allowfullscreen', '');
   iframe.setAttribute('allow', 'autoplay');
@@ -466,7 +466,7 @@ function createIframe(id) {
   return iframe;
 }
 function generateURL(id) {
-  let query = '?rel=0&showinfo=0&autoplay=1';
+  var query = '?rel=0&showinfo=0&autoplay=1';
 
   return 'https://www.youtube.com/embed/' + id + query;
 }
