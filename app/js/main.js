@@ -378,14 +378,17 @@ function closeAllSelect(elmnt) {
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
 function showHiddenSelect(target) {
-  if(target.closest('.custom-select').id == 'category-select') {
-    if(target.getAttribute('data-value') == '3') {
-      document.querySelector('.reg_field-organizations').classList.add('active')
-    }
-    else {
-      document.querySelector('.reg_field-organizations').classList.remove('active')
+  if(document.querySelector('#category-select')) {
+    if(target.closest('.custom-select').id == 'category-select') {
+      if(target.getAttribute('data-value') == '3') {
+        document.querySelector('.reg_field-organizations').classList.add('active')
+      }
+      else {
+        document.querySelector('.reg_field-organizations').classList.remove('active')
+      }
     }
   }
+  
 
 }
 $('.media__slider').slick({
@@ -536,64 +539,72 @@ function resetChoise(){
 document.addEventListener('click', resetChoise)
 
 function mapHightlighter() {
-
   var el = event.target;
   var fakeSelect = document.querySelector('.select-selected');
   var hiddenSelect = document.querySelector('#hiddenSelect');
   if(document.querySelector('.places__download')) {
     var downloads = document.querySelectorAll('.places__download')
   }
-  if (el.classList.contains('st1')){
-    document.querySelectorAll('.st1').forEach(function(item){
-      item.classList.remove('active')
-    })
-    el.classList.add('active')
+  if (el.getAttribute('class') == 'st1'){
+
+
+    for(var i = 0; i <= document.querySelectorAll('.st1').length - 1; i++) {
+      document.querySelectorAll('.st1')[i].setAttribute('class', 'st1')
+    }
+
+    el.setAttribute('class', 'st1 active');
     hiddenSelect.setAttribute('value', el.getAttribute('data-region'))
     fakeSelect.innerText = el.getAttribute('data-region')
 
-    downloads.forEach(function(region){
-      region.classList.add('hidden')
 
-      if(region.getAttribute('data-region') == el.getAttribute('data-region')){
-        region.classList.remove('hidden')
+    for(var i = 0; i <= downloads.length - 1; i++) {
+      downloads[i].classList.add('hidden')
+
+      if(downloads[i].getAttribute('data-region') == el.getAttribute('data-region')){
+        downloads[i].classList.remove('hidden')
       }
-    })
-
+    }
   }
-  if (el.parentNode.classList.contains('st1')){
-    document.querySelectorAll('.st1').forEach(function(item){
-      item.classList.remove('active')
-    })
-    el.parentNode.classList.add('active')
+  if (el.parentNode.getAttribute('class') == 'st1'){
+
+    for(var i = 0; i <= document.querySelectorAll('.st1').length - 1; i++) {
+      document.querySelectorAll('.st1')[i].setAttribute('class', 'st1')
+    }
+
+    el.parentNode.setAttribute('class', 'st1 active');
     hiddenSelect.setAttribute('value', el.parentNode.getAttribute('data-region'))
     fakeSelect.innerText = el.parentNode.getAttribute('data-region')
 
-    downloads.forEach(function(region){
-      region.classList.add('hidden')
 
-      if(region.getAttribute('data-region') == el.parentNode.getAttribute('data-region')){
-        region.classList.remove('hidden')
+    for(var i = 0; i <= downloads.length - 1; i++) {
+      downloads[i].classList.add('hidden')
+
+      if(downloads[i].getAttribute('data-region') == el.parentNode.getAttribute('data-region')){
+        downloads[i].classList.remove('hidden')
       }
-    })
+    }
 
   }
-  if(el.classList.contains('same-as-selected')){
-    document.querySelectorAll('.st1').forEach(function(item){
-      item.classList.remove('active')
-    })
-    document.querySelectorAll('.st1').forEach(function(item){
-      if(item.getAttribute('data-region') == el.getAttribute('data-value')) {
-        item.classList.add('active')
-      }
-    })
+  if(el.getAttribute('class') == 'same-as-selected'){
 
-    downloads.forEach(function(region){
-      region.classList.add('hidden')
+    for(var i = 0; i <= document.querySelectorAll('.st1').length - 1; i++) {
+      document.querySelectorAll('.st1')[i].setAttribute('class', 'st1')
+    }
 
-      if(region.getAttribute('data-region') == el.getAttribute('data-value')){
-        region.classList.remove('hidden')
+
+    for(var i = 0; i <= document.querySelectorAll('.st1').length - 1; i++) {
+      if(document.querySelectorAll('.st1')[i].getAttribute('data-region') == el.getAttribute('data-value')) {
+        document.querySelectorAll('.st1')[i].setAttribute('class', 'st1 active')
       }
-    })
+    }
+
+    for(var i = 0; i <= downloads.length - 1; i++) {
+      downloads[i].classList.add('hidden')
+
+      if(downloads[i].getAttribute('data-region') == el.getAttribute('data-value')){
+        downloads[i].classList.remove('hidden')
+      }
+    }
   }
 }
 
@@ -690,4 +701,3 @@ $('.instructions__slider-4').slick({
     },
   ]
 })
-
