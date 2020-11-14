@@ -9,6 +9,10 @@
             color: #02517A;
         }
     }
+    .video_container {
+        max-width: 48%;
+        margin-top: 35px;
+    }
     &__selected_category {
         p {
             font-size: 20px;
@@ -118,6 +122,9 @@
 }
 @media screen and (max-width: 1200px) {
     .pass_page {
+        .video_container {
+            max-width: unset;
+        }
         &__categories {
             &-item {
                 width: 100%;

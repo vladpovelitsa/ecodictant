@@ -3999,6 +3999,9 @@ nav {
     .pass_page p strong {
       font-weight: 700;
       color: #02517A; }
+  .pass_page .video_container {
+    max-width: 48%;
+    margin-top: 35px; }
   .pass_page__selected_category p {
     font-size: 20px; }
     .pass_page__selected_category p.pass_page__selected_category-value {
@@ -4106,6 +4109,8 @@ nav {
         border-radius: 6px; }
 
 @media screen and (max-width: 1200px) {
+  .pass_page .video_container {
+    max-width: unset; }
   .pass_page__categories-item {
     width: 100%; }
     .pass_page__categories-item .btn {
@@ -4541,5 +4546,3 @@ nav {
     align-items: flex-start; }
     .report .reg_field-label {
       margin-bottom: 15px; }
-
-/*# sourceMappingURL=style.css.map */
