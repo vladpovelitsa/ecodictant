@@ -105,9 +105,10 @@ $('.faces__slider').slick({
   autoplaySpeed: 4000,
 })
 $('.committee__slider').slick({
+  lazyLoad: 'ondemand',
   dots:false,
   slidesToShow: 3,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 4000,
   responsive: [
     {
@@ -127,7 +128,7 @@ $('.committee__slider').slick({
 $('.support__slider').slick({
   dots:false,
   variableWidth: true,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 4000,
   responsive: [
     {
@@ -174,10 +175,11 @@ $('.partners__container--organizators .partners__wrap').slick({
   ]
 })
 $('.partners__container--official .partners__wrap').slick({
+  lazyLoad: 'ondemand',
   infinite: true,
   mobileFirst: true,
   slidesToShow: 2,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 4000,
 
   responsive: [
@@ -200,10 +202,11 @@ $('.partners__container--official .partners__wrap').slick({
   ]
 })
 $('.partners__container--info .partners__wrap').slick({
+  lazyLoad: 'ondemand',
   infinite: true,
   mobileFirst: true,
   slidesToShow: 2,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 4000,
 
   responsive: [ 
@@ -613,15 +616,18 @@ document.addEventListener('click', mapHightlighter)
 
 
 $('.promo__slider').slick({
+  lazyLoad: 'ondemand',
   dots: false,
   slidesToShow: 1,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 4000,
   responsive: [
     {
       breakpoint: 767,
       settings: {
         arrows:false,
+        autoplay: true,
+        autoplaySpeed: 4000,
       }
     },
   ]
