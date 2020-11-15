@@ -396,9 +396,10 @@ function showHiddenSelect(target) {
 
 }
 $('.media__slider').slick({
+  lazyLoad: 'ondemand',
   dots:false,
   slidesToShow: 3,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 4000,
   responsive: [
     {
