@@ -98,9 +98,10 @@ $(function($){
   $('[type="tel"]').mask("+7 (999) 999-99-99");
 })
 $('.faces__slider').slick({
+  lazyLoad: 'ondemand',
   dots:true,
   adaptiveHeight: true,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 4000,
 })
 $('.committee__slider').slick({
