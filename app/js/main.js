@@ -295,7 +295,7 @@ $('.partners__container--general .partners__wrap').slick({
 
 }
 if(document.querySelector('.offer__countdown_container')){
-  countDown(2020, 10, 16, 23);
+  countDown(2020, 10, 17, 23);
 }
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
