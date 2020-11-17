@@ -200,10 +200,66 @@
             display: flex;
         }
     }
+    
+    .content--over {
+        .btn {
+            max-width: 370px;
+            height: 52px;
+            display: flex;
+        }
+        p {
+            margin-bottom: 1.5em;
+        }
+        h6 {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #87AB15;
+            font-weight: 700;
+            margin-bottom: 27px;
+            display: block;
+        }
+        .social_list {
+            display: flex;
+            list-style: none;
+            margin-bottom: 40px;
+            a {
+                display: block;
+                margin-right: 20px;
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+    .content--reg-finish {
+        svg {
+            margin: 0 auto 40px;
+        }
+    }
     .mobile_btns {
         display: none;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    .offer {
+        .content--reg-finish {
+            svg {
+                margin-top: 60px;
+            }
+        }
+        .content--reg-finish {
+            br {
+                display: none;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }        
+}
+
 @media screen and (min-width: 2000px) {
     .offer {
         background-size: auto;

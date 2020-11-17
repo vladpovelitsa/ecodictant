@@ -1407,8 +1407,46 @@ nav {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
+  .offer .content--over .btn {
+    max-width: 370px;
+    height: 52px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .offer .content--over p {
+    margin-bottom: 1.5em; }
+  .offer .content--over h6 {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #87AB15;
+    font-weight: 700;
+    margin-bottom: 27px;
+    display: block; }
+  .offer .content--over .social_list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin-bottom: 40px; }
+    .offer .content--over .social_list a {
+      display: block;
+      margin-right: 20px; }
+      .offer .content--over .social_list a:hover {
+        opacity: .7; }
+  .offer .content--reg-finish svg {
+    margin: 0 auto 40px; }
   .offer .mobile_btns {
     display: none; }
+
+@media screen and (max-width: 768px) {
+  .offer .content--reg-finish svg {
+    margin-top: 60px; }
+  .offer .content--reg-finish br {
+    display: none; }
+  .offer .content--reg-finish h1 {
+    font-size: 24px; } }
 
 @media screen and (min-width: 2000px) {
   .offer {
