@@ -2647,6 +2647,13 @@ nav {
   -ms-flex-align: center;
   align-items: center;
   padding-bottom: 25px; }
+  .login__warning {
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #FF0000;
+    margin-bottom: 30px; }
   .login__form {
     max-width: 566px;
     width: 100%;
