@@ -716,5 +716,3 @@ $('.promo__slider').slick({
       },
     ]
   })
-  
-  console.log('test')
