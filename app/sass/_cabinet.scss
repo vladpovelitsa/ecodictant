@@ -1,5 +1,26 @@
 .cabinet {
     padding-bottom: 60px;
+    .btn--dowmload-report {
+        color: #98C22A;
+        background: none;
+        border: none;
+        margin-left: 0px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 700;
+        svg {
+            margin-left: 11px;
+            transition: .5s;
+        }
+        &:hover {
+            text-decoration: underline;
+            svg {
+                fill:#02517A;
+            }
+        }
+    }
     &__header {
         display: flex;
         align-items: center;
@@ -111,7 +132,9 @@
         line-height: 2;
         color:#212529;
         margin-bottom: 30px;
-        
+    }
+    &__desc-accepted {
+        margin-bottom: 0px;
     }
 }
 
