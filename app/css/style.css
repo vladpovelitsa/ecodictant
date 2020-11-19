@@ -3902,6 +3902,17 @@ nav {
       margin-left: 72px; }
       .cabinet__table_cell-link:hover {
         text-decoration: underline; }
+  .cabinet__table--results {
+    margin-bottom: 0; }
+  .cabinet .pagination {
+    margin: 42px 0 52px; }
+    .cabinet .pagination a {
+      background: #E6F1F9;
+      color: #008DD2;
+      font-weight: bold; }
+      .cabinet .pagination a.active {
+        background: #98C22A;
+        color: #fff; }
   .cabinet__desc {
     font-size: 16px;
     line-height: 2;

@@ -127,6 +127,21 @@
             }
         }
     }
+    &__table--results {
+        margin-bottom: 0;
+    }
+    .pagination {
+        margin: 42px 0 52px;
+        a {
+            background: #E6F1F9;
+            color: #008DD2;
+            font-weight: bold;
+            &.active {
+                background: #98C22A;
+                color: #fff;
+            }
+        }
+    }
     &__desc {
         font-size: 16px;
         line-height: 2;
