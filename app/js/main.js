@@ -652,60 +652,69 @@ $('.promo__slider').slick({
 //   })
 // } 
 
-$('.instructions__slider-1').slick({
-  slidesToShow: 1,
-  mobileFirst: true,
-  responsive: [
-    {
-      breakpoint: 515,
-      settings: 'unslick'
-    },
-  ]
-})
-
-$('.instructions__slider-2').slick({
-  slidesToShow: 1,
-  mobileFirst: true,
-  responsive: [
-    {
-      breakpoint: 515,
-      settings: 'unslick'
-    },
-  ]
-})
-
-
-$('.instructions__slider-3').slick({
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 1250,
-      settings: {
-        slidesToShow:2,
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow:1,
-      }
-    },
-  ]
-})
-$('.instructions__slider-4').slick({
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 1250,
-      settings: {
-        slidesToShow:2,
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow:1,
-      }
-    },
-  ]
-})
+  $('.instructions__slider-1').slick({
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1270,
+        settings: {
+          slidesToShow:2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow:1,
+        }
+      },
+    ]
+  })
+  
+  $('.instructions__slider-2').slick({
+    slidesToShow: 1,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 515,
+        settings: 'unslick'
+      },
+    ]
+  })
+  
+  
+  $('.instructions__slider-3').slick({
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1250,
+        settings: {
+          slidesToShow:2,
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow:1,
+        }
+      },
+    ]
+  })
+  $('.instructions__slider-4').slick({
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1250,
+        settings: {
+          slidesToShow:2,
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow:1,
+        }
+      },
+    ]
+  })
+  
+  console.log('test')
