@@ -87,8 +87,19 @@ nav {
     }
     .account_link {
         margin-left: 24px;
-        background: #fff;
-        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        p {
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: bold;
+            color: #87AB15;
+            max-width: 140px;
+        }
+        svg {
+            background: #fff;
+            border-radius: 50%;
+        }
     }
     .btn {
         margin-left: 25px;
@@ -176,6 +187,13 @@ nav {
         .btn,.account_link {
             margin-left: 0;
             margin-top: 45px;
+        }
+        .account_link {
+            flex-direction: column-reverse;
+            p {
+                text-align: center;
+                margin-top: 10px;
+            }
         }
     }
     .header {

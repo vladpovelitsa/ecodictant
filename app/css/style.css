@@ -886,8 +886,23 @@ nav {
         margin-left: 0; }
   nav .account_link {
     margin-left: 24px;
-    background: #fff;
-    border-radius: 50%; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    nav .account_link p {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: bold;
+      color: #87AB15;
+      max-width: 140px; }
+    nav .account_link svg {
+      background: #fff;
+      border-radius: 50%; }
   nav .btn {
     margin-left: 25px;
     width: 100%;
@@ -977,6 +992,15 @@ nav {
     nav .btn, nav .account_link {
       margin-left: 0;
       margin-top: 45px; }
+    nav .account_link {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; }
+      nav .account_link p {
+        text-align: center;
+        margin-top: 10px; }
   .header .logo {
     max-width: 162px; } }
 
@@ -1220,6 +1244,9 @@ nav {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   overflow: hidden; }
   .offer__main {
     display: -webkit-box;
@@ -1229,7 +1256,7 @@ nav {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding-bottom: 22px; }
+    padding-bottom: 35px; }
     .offer__main .btn {
       padding: 0 33px;
       height: 52px;
@@ -1438,7 +1465,25 @@ nav {
   .offer .content--reg-finish svg {
     margin: 0 auto 40px; }
   .offer .mobile_btns {
-    display: none; }
+    display: none;
+    margin-bottom: 36px; }
+  .offer__cert-description {
+    width: 100%;
+    color: #212529;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: normal; }
+    .offer__cert-description .p--blue {
+      color: #008DD2;
+      font-weight: bold; }
+    .offer__cert-description .p--green {
+      color: #98C22A;
+      font-weight: bold;
+      margin-top: 28px; }
+
+@media screen and (max-width: 800px) {
+  .offer__main .btn {
+    font-size: 19px; } }
 
 @media screen and (max-width: 768px) {
   .offer .content--reg-finish svg {
@@ -1446,7 +1491,10 @@ nav {
   .offer .content--reg-finish br {
     display: none; }
   .offer .content--reg-finish h1 {
-    font-size: 24px; } }
+    font-size: 24px; }
+  .offer__cert-description {
+    font-size: 14px;
+    line-height: 24px; } }
 
 @media screen and (min-width: 2000px) {
   .offer {

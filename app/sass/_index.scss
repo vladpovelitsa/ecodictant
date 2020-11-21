@@ -6,11 +6,12 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    flex-wrap: wrap;
     overflow: hidden;
     &__main {
         display: flex;
         flex-wrap: wrap;
-        padding-bottom: 22px;
+        padding-bottom: 35px;
         .btn {
             padding: 0 33px;
             height: 52px;
@@ -238,6 +239,34 @@
     }
     .mobile_btns {
         display: none;
+        margin-bottom: 36px;
+    }
+    &__cert-description {
+        width: 100%;
+        color: #212529;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: normal;
+        .p--blue {
+            color: #008DD2;
+            font-weight: bold;
+        }
+        .p--green {
+            color: #98C22A;
+            font-weight: bold;
+            margin-top: 28px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .offer {
+        &__main {
+            .btn {
+                font-size: 19px;
+            }
+        }
     }
 }
 
@@ -256,6 +285,10 @@
             h1 {
                 font-size: 24px;
             }
+        }
+        &__cert-description {
+            font-size: 14px;
+            line-height: 24px;
         }
     }        
 }
