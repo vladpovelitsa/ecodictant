@@ -32,4 +32,21 @@
     &--participant {
         background: url(../img/sertificate_participant.png) top center no-repeat;
     }
+    &--blagodarnost {
+        background: url(../img/blagodarnost.jpg) top center no-repeat;
+        h1 {
+            top: 610px;
+            text-transform: none;
+            font-size: 30px;
+            line-height: 36px;
+            width: 90%;
+            padding: 0 5%;
+        }
+    }
+    &--pochetnaya_gramota {
+        background: url(../img/pochetnaya_gramota.jpg) top center no-repeat;
+        h1 {
+            top: 600px;
+        }
+    }
 }
