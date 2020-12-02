@@ -160,6 +160,13 @@
         color:#212529;
         margin-bottom: 33px;
     }
+    &__download {
+        font-size: 16px;
+        line-height: 2;
+        font-weight: bold;
+        color: #02517A;
+        margin-bottom: 33px;
+    }
     &__img {
         display: block;
         margin-bottom: 43px;
@@ -286,7 +293,8 @@
     }
     .diploma {
         &__img,
-        &__desc {
+        &__desc,
+        &__download {
             padding-left: calc(50vw - 250px);
     		padding-right: calc(50vw - 250px); 
             max-width: unset;
@@ -313,7 +321,8 @@
     }
     .diploma {
         &__img,
-        &__desc {
+        &__desc,
+        &__download {
             padding-left: calc(50vw - 175px);
     		padding-right: calc(50vw - 175px); 
             max-width: unset;
@@ -332,7 +341,8 @@
     }
     .diploma {
         &__img,
-        &__desc {
+        &__desc,
+        &__download {
             padding-left: calc(50vw - 170px);
     		padding-right: calc(50vw - 170px); 
             max-width: unset;
@@ -351,7 +361,8 @@
     }
     .diploma {
         &__img,
-        &__desc {
+        &__desc,
+        &__download {
             padding-left: calc(50vw - 150px);
     		padding-right: calc(50vw - 150px); 
             max-width: unset;
