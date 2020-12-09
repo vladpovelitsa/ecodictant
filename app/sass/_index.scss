@@ -2,7 +2,7 @@
 .offer {
     background-size: cover;
     padding-top: 322px;
-    padding-bottom: 76px;
+    padding-bottom: 5px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -24,7 +24,7 @@
         font-size: 60px;
         font-weight: 700;
         line-height: 1.26;
-        margin: 0 0 22px;
+        margin: 0 0 30px;
         width: 100%;
         z-index: 150;
         position: relative;
@@ -301,7 +301,78 @@
         background-size: auto;
         background-position: center 65%;
         // background-position: -100% center;
-    }        
+    }
+}
+
+.cert_alert {
+    p {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: normal;
+        color: #212529;
+        margin-bottom: 30px;
+    }
+    br {
+        display: none;
+    }
+    .p--blue {
+        font-size: 22px;
+        line-height: 32px;
+        font-weight: bold;
+        color: #008DD2;
+        margin-bottom: 30px;
+    }
+    &__gray {
+        background-color: #F6F6FD;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+    }
+    ul {
+        list-style: none;
+    }
+    li {
+        padding-left: 39px;
+        position: relative;
+        margin-bottom: 1em;
+
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+        color: #02517A;
+    }
+    li:before {
+        content: "";
+        display: block;
+        position: absolute;
+        background: #98C22A;
+        left: 0;
+        top: 12px;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cert_alert {
+        .p--blue {
+            font-size: 28px;
+            line-height: 38px;
+        }
+        li {
+            line-height: 38px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .cert_alert {
+        br {
+            display: block;
+        }
+    }
 }
 
 .faces {
@@ -1327,6 +1398,7 @@
         }
         &__heading {
             font-size: 29px;
+            margin-bottom: 0;
         }
     }
     .faces {
