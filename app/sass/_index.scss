@@ -375,6 +375,55 @@
     }
 }
 
+.offer__moders {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    p {
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: bold;
+        color: #02517A;
+        width: 100%;
+        margin-bottom: 40px;
+        br {
+            display: none;
+        }
+    }
+    .btn {
+        width: 100%;
+        display: flex;
+        height: 52px;
+        padding: 0 30px;
+        &:first-of-type {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .offer__moders {
+        .btn {
+            width: auto;
+            &:first-of-type {
+                margin-bottom: 0px;
+                margin-right: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .offer__moders {
+        p {
+            br {
+                display: block;
+            }
+        }
+    }
+}
+
 .faces {
     background: #F6F6FD;
     position: relative;

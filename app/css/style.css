@@ -1561,6 +1561,47 @@ nav {
   .cert_alert br {
     display: block; } }
 
+.offer__moders {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 35px; }
+  .offer__moders p {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #02517A;
+    width: 100%;
+    margin-bottom: 40px; }
+    .offer__moders p br {
+      display: none; }
+  .offer__moders .btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 52px;
+    padding: 0 30px; }
+    .offer__moders .btn:first-of-type {
+      margin-bottom: 25px; }
+
+@media screen and (min-width: 768px) {
+  .offer__moders .btn {
+    width: auto; }
+    .offer__moders .btn:first-of-type {
+      margin-bottom: 0px;
+      margin-right: 25px; } }
+
+@media screen and (min-width: 950px) {
+  .offer__moders p br {
+    display: block; } }
+
 .faces {
   background: #F6F6FD;
   position: relative; }
